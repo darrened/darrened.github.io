@@ -1,0 +1,170 @@
+{
+    "title": "Training Better Models",
+    "questions": [
+        {
+            "question": "Why might you drop a feature like 'Customer ID' before training a model?",
+            "options": [
+                "It contains missing values",
+                "It’s a unique identifier and adds no predictive value",
+                "It’s a categorical variable",
+                "It changes too frequently during training"
+            ],
+            "answer": 1,
+            "explanation": "Unique identifiers like 'Customer ID' don’t help the model learn patterns—they’re just labels."
+        },
+        {
+            "question": "You have a column with values: 'Low', 'Medium', 'High'. What’s the best encoding method?",
+            "options": [
+                "Label encoding",
+                "One-hot encoding",
+                "Drop the column",
+                "Convert to binary"
+            ],
+            "answer": 0,
+            "explanation": "Label encoding preserves the ordinal relationship between 'Low', 'Medium', and 'High'."
+        },
+        {
+            "question": "You’re encoding 'Color' with values: 'Red', 'Blue', 'Green'. What’s the best approach?",
+            "options": [
+                "Label encoding",
+                "One-hot encoding",
+                "Drop the column",
+                "Convert to grayscale"
+            ],
+            "answer": 1,
+            "explanation": "One-hot encoding is best for nominal categories with no inherent order."
+        },
+        {
+            "question": "Why is standardisation important before training models like SVM or KNN?",
+            "options": [
+                "It reduces overfitting",
+                "It improves interpretability",
+                "It ensures features are on the same scale",
+                "It removes outliers"
+            ],
+            "answer": 2,
+            "explanation": "Standardisation ensures that distance-based models treat all features fairly by scaling them."
+        },
+        {
+            "question": "What’s the difference between normalisation and standardisation?",
+            "options": [
+                "Normalisation centers data around zero",
+                "Standardisation scales data between 0 and 1",
+                "Normalisation uses mean and std; standardisation uses min-max",
+                "Standardisation uses mean and std; normalisation uses min-max"
+            ],
+            "answer": 3,
+            "explanation": "Standardisation uses mean and standard deviation; normalisation uses min-max scaling."
+        },
+        {
+            "question": "You have 100 features, but suspect many are redundant. What technique helps reduce dimensionality?",
+            "options": [
+                "Standardisation",
+                "One-hot encoding",
+                "Principal Component Analysis (PCA)",
+                "K-Fold cross validation"
+            ],
+            "answer": 2,
+            "explanation": "PCA transforms features into fewer components that retain most of the variance."
+        },
+        {
+            "question": "What’s a risk of dropping features manually?",
+            "options": [
+                "Improved accuracy",
+                "Better interpretability",
+                "Faster training",
+                "Loss of important information"
+            ],
+            "answer": 3,
+            "explanation": "Dropping features without analysis can remove valuable predictive signals."
+        },
+        {
+            "question": "Which of the following is a hyperparameter?",
+            "options": [
+                "Model accuracy",
+                "Learning rate",
+                "Feature importance",
+                "Confusion matrix"
+            ],
+            "answer": 1,
+            "explanation": "Hyperparameters are set before training—like learning rate, depth, or number of estimators."
+        },
+        {
+            "question": "What’s the purpose of tuning hyperparameters?",
+            "options": [
+                "To reduce dataset size",
+                "To improve model performance",
+                "To encode categorical variables",
+                "To remove outliers"
+            ],
+            "answer": 1,
+            "explanation": "Hyperparameter tuning helps optimize model behavior for better accuracy and generalisation."
+        },
+        {
+            "question": "Which method helps evaluate model performance more reliably than a single train/test split?",
+            "options": [
+                "Standardisation",
+                "PCA",
+                "K-Fold cross validation",
+                "One-hot encoding"
+            ],
+            "answer": 2,
+            "explanation": "K-Fold cross validation tests the model on multiple splits to ensure robustness."
+        },
+        {
+            "question": "In 5-Fold cross validation, how many models are trained?",
+            "options": [
+                "1",
+                "5",
+                "10",
+                "Depends on the dataset"
+            ],
+            "answer": 1,
+            "explanation": "Each fold trains a separate model—so 5 folds means 5 models."
+        },
+        {
+            "question": "Which preprocessing step is most important for PCA?",
+            "options": [
+                "One-hot encoding",
+                "Standardisation",
+                "Label encoding",
+                "Cross validation"
+            ],
+            "answer": 1,
+            "explanation": "PCA is sensitive to feature scale, so standardisation is essential."
+        },
+        {
+            "question": "You’re training a decision tree. Which of these is a tunable hyperparameter?",
+            "options": [
+                "Max depth",
+                "Feature importance",
+                "Accuracy",
+                "Recall"
+            ],
+            "answer": 0,
+            "explanation": "Max depth controls how deep the tree grows and is set before training."
+        },
+        {
+            "question": "What’s a benefit of dimensionality reduction?",
+            "options": [
+                "More overfitting",
+                "Slower training",
+                "Improved generalisation",
+                "Loss of accuracy"
+            ],
+            "answer": 2,
+            "explanation": "Reducing dimensions can help models generalise better and reduce noise."
+        },
+        {
+            "question": "Which of these is NOT a preprocessing step?",
+            "options": [
+                "One-hot encoding",
+                "Standardisation",
+                "Hyperparameter tuning",
+                "Dropping irrelevant features"
+            ],
+            "answer": 2,
+            "explanation": "Hyperparameter tuning is part of model training and evaluation—not preprocessing. Preprocessing happens before any model is trained."
+        }
+    ]
+}
