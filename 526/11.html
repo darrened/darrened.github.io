@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Week 11</title><link rel="stylesheet" href="../styles/style.min.css"><script src="../scripts/themes.min.js"></script></head><body class="theme-default"><main><h1>Week 11 - Unsupervised Learning</h1><details class="slide"><summary><h2>Guided Learning <span class="view-instruction">- click to view</span></h2>Guided learning is additional material for you to read outside of class time</summary><div><h3>Assessment</h3><p>I think it is time you worried more about that now</p></div></details><hr class="separator"><div class="slide"><h2>Lab 1 - Task</h2><p>Up until now, most of the machine learning models you’ve seen have relied on labels. For example, predicting whether a passenger survived the Titanic. These are all examples of supervised learning, the model learning from examples where the correct answer is already known.</p><p>This week, we look at unsupervised learning. Here, we give the model data... and that’s it! No labels this time! The goal is for the algorithm to discover structure or patterns on its own.</p><h3>What Is Unsupervised Learning?</h3><p>Unsupervised learning is all about finding hidden structure in data. There are two major types you will encounter:</p><ul><li><strong>Clustering</strong>: grouping similar items together</li><li><strong>Dimensionality Reduction</strong>: simplifying data while keeping important patterns</li></ul><p>You have already been exposed to some dimensionality reduction with PCA so today we will focus mainly on clustering.</p><h3>K‑Means Clustering</h3><p>One of the most widely used clustering algorithms is K‑Means. It tries to split your dataset into K groups, where each group contains items that are similar to each other.</p><p>Here is a simple example using the classic Iris dataset (which is actually available through sk_learn itself).</p><pre class="codebox"><code>from sklearn.cluster import KMeans
+from sklearn.datasets import load_iris
+import pandas as pd
+
+# Load the dataset
+iris = load_iris()
+X = iris.data
+
+# Create a K-Means model with 3 clusters
+model = KMeans(n_clusters=3, random_state=42)
+
+model.fit(X)
+
+labels = model.labels_
+print(labels)
+      </code></pre><p>Note. We never told the model what the "correct" flower species were. It simply looked at the measurements and grouped similar flowers together.</p><p>Once you have cluster labels, you can visualise them. Remember, multi-dimension, so here are two features to visualise in 2D:</p><pre class="codebox"><code>import matplotlib.pyplot as plt
+
+plt.scatter(X[:, 0], X[:, 1], c=labels)
+plt.xlabel("Sepal Length")
+plt.ylabel("Sepal Width")
+plt.title("K-Means Clustering")
+plt.show()
+      </code></pre><p>If everything worked, you should see three groups, even though the model was never given any labels.</p><h3>Combining PCA and K‑Means</h3><p>A common workflow is to reduce the data first, then cluster it:</p><pre class="codebox"><code># Reduce to 2 dimensions
+      pca = PCA(n_components=2)
+      X_reduced = pca.fit_transform(X)
+
+      # Cluster the reduced data
+      model = KMeans(n_clusters=3, random_state=42)
+      model.fit(X_reduced)
+
+      plt.scatter(X_reduced[:, 0], X_reduced[:, 1], c=model.labels_)
+      plt.title("PCA + K-Means Clustering")
+      plt.show()
+      </code></pre><p>This often produces cleaner, more meaningful clusters.</p></div><hr class="separator"><div class="slide"><h2>Lab 2 - Task</h2><p>We now have clustered data? But what now? The real value comes from what you do after the clusters have been formed. Below are some of the most common next steps once you have grouped your data.</p><h3>Evaluating Your Clusters</h3><p>Unlike supervised learning, we do not have labels to compare against, so we need different ways to judge whether our clusters make sense.</p><ul><li><strong>Silhouette Score</strong>: Measures how similar each point is to its own cluster compared to other clusters.</li><li><strong>Inertia</strong>: Used in K-Means, lower values generally indicate tighter clusters.</li><li><strong>Elbow Method</strong>: Helps you choose a good number of clusters by plotting inertia against K.</li></ul><pre class="codebox"><code>from sklearn.metrics import silhouette_score
+
+score = silhouette_score(X, labels)
+print("Silhouette Score:", score)
+</code></pre><p>A higher silhouette score means your clusters are more distinct and meaningful.</p><h3>Understanding the Clusters</h3><p>Once you have clusters, the next step is to figure out what they actually represent. This usually involves:</p><ul><li>Looking at the average values inside each cluster</li><li>Checking which features differ the most between clusters</li><li>Giving each cluster a meaningful label such as "Budget Shoppers", "High-Risk Patients", "Frequent Travellers"</li></ul><pre class="codebox"><code>import pandas as pd
+
+df = pd.DataFrame(X, columns=iris.feature_names)
+df["cluster"] = labels
+
+print(df.groupby("cluster").mean())
+</code></pre><p>This helps you understand the story behind each group.</p><h3>Using Clusters for Further Analysis</h3><p>Clusters often lay the ground work for other tasks, such as:</p><ul><li><strong>Feature Engineering</strong>: Adding the cluster label as a new feature for a supervised model.</li><li><strong>Anomaly Detection</strong>: Points far from any cluster centre may be outliers.</li><li><strong>Segmentation</strong>: Grouping customers, patients, or users into meaningful categories.</li></ul><p>For example, you might cluster customers first, then build a classifier that predicts which cluster a new customer belongs to.</p><h3>Visualising Cluster Behaviour</h3><p>Visualisation is a powerful way to understand what your clusters are doing. You can:</p><ul><li>Plot clusters in 2D using PCA</li><li>Use pairplots to compare features</li></ul><pre class="codebox"><code>import seaborn as sns
+
+sns.pairplot(df, hue="cluster")
+</code></pre><p>This often reveals patterns you might not have noticed.</p><h3>Acting on the Clusters</h3><p>Finally, clustering is often performed with the intention of it leading to real decisions. This depends on sector, but some examples might be:</p><ul><li><strong>Marketing</strong>: Targeting different customer groups with different campaigns.</li><li><strong>Healthcare</strong>: Identifying patient groups with similar risk profiles.</li><li><strong>Finance</strong>: Detecting unusual behaviour that may indicate fraud.</li><li><strong>Operations</strong>: Tailoring services to different user segments.</li></ul><p>In other words, clustering helps you understand your data at a deeper level, and that understanding drives better decisions.</p></div></main></body></html>
