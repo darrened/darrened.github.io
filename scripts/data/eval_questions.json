@@ -1,0 +1,170 @@
+{
+  "title": "Evaluating Models",
+  "questions": [
+    {
+      "question": "A model has an accuracy of 95% but a recall of 40%. What does this suggest?",
+      "options": [
+        "It’s excellent at identifying all positive cases",
+        "It’s missing many actual positive cases",
+        "It’s misclassifying most negative cases",
+        "It’s overfitting the training data"
+      ],
+      "answer": 1,
+      "explanation": "High accuracy can be misleading in imbalanced datasets. Low recall means many actual positives are missed."
+    },
+    {
+      "question": "You’re building a spam filter. Your model has high precision (98%) but low recall (50%). What’s the likely outcome?",
+      "options": [
+        "Most spam emails are caught, but some legitimate emails are wrongly flagged",
+        "The model catches all spam",
+        "Most spam emails are missed, but flagged ones are almost always spam",
+        "The model flags too many emails as spam"
+      ],
+      "answer": 2,
+      "explanation": "High precision means flagged emails are likely spam, but low recall means many spam emails go undetected."
+    },
+    {
+      "question": "A medical tool has recall of 95% and precision of 60%. What does this mean?",
+      "options": [
+        "It rarely misses sick patients but often mislabels healthy ones as sick",
+        "It’s very accurate overall",
+        "It only detects severe cases",
+        "It’s unreliable for diagnosis"
+      ],
+      "answer": 0,
+      "explanation": "High recall ensures most sick patients are identified, but low precision means many false alarms."
+    },
+    {
+      "question": "A model has perfect precision but very low recall. What kind of behavior is it showing?",
+      "options": [
+        "It’s predicting everything as positive",
+        "It’s being very cautious about predicting positives",
+        "It’s mislabeling negatives",
+        "It’s randomly guessing"
+      ],
+      "answer": 1,
+      "explanation": "Perfect precision means every predicted positive is correct, but low recall means it rarely predicts positives at all."
+    },
+    {
+      "question": "You’re evaluating a model on a highly imbalanced dataset (95% negatives, 5% positives). Which metric is most reliable?",
+      "options": [
+        "Accuracy",
+        "Precision",
+        "Recall",
+        "Matthews Correlation Coefficient (MCC)"
+      ],
+      "answer": 3,
+      "explanation": "MCC accounts for all parts of the confusion matrix and is robust to class imbalance."
+    },
+    {
+      "question": "Given the following confusion matrix:<br><br><table><tr><th></th><th>Predicted Positive</th><th>Predicted Negative</th></tr><tr><th>Actual Positive</th><td>70</td><td>30</td></tr><tr><th>Actual Negative</th><td>10</td><td>90</td></tr></table><br>What does the model’s performance suggest?",
+      "options": [
+        "It’s good at identifying positives and negatives",
+        "It misses most positives",
+        "It mislabels many negatives",
+        "It’s guessing randomly"
+      ],
+      "answer": 0,
+      "explanation": "High true positives and true negatives, with relatively few errors. Accuracy = 80%; Recall = 70%."
+    },
+    {
+      "question": "What does a recall of 70% and precision of 87.5% tell you?",
+      "options": [
+        "The model is cautious and misses many positives",
+        "The model is guessing",
+        "The model mislabels negatives as positives",
+        "The model catches most positives and is usually correct when it does"
+      ],
+      "answer": 3,
+      "explanation": "Recall = 70%; Precision = 87.5%. The model is effective at identifying positives and minimizing false alarms."
+    },
+    {
+      "question": "Given the following confusion matrix:<br><br><table><tr><th></th><th>Predicted Positive</th><th>Predicted Negative</th></tr><tr><th>Actual Positive</th><td>40</td><td>60</td></tr><tr><th>Actual Negative</th><td>20</td><td>80</td></tr></table><br>What is the model’s specificity and what does it mean?",
+      "options": [
+        "80% – It correctly identifies most negatives",
+        "60% – It misses many negatives",
+        "40% – It mislabels most negatives",
+        "20% – It rarely predicts negatives correctly"
+      ],
+      "answer": 0,
+      "explanation": "Specificity = TN / (TN + FP) = 80 / 100 = 80%."
+    },
+    {
+      "question": "Given the following confusion matrix:<br><br><table><tr><th></th><th>Predicted Positive</th><th>Predicted Negative</th></tr><tr><th>Actual Positive</th><td>50</td><td>50</td></tr><tr><th>Actual Negative</th><td>25</td><td>75</td></tr></table><br>What does an F1-score of ~0.62 suggest?",
+      "options": [
+        "The model balances precision and recall moderately well",
+        "The model is perfect",
+        "The model is biased toward negatives",
+        "The model has high recall but poor precision"
+      ],
+      "answer": 0,
+      "explanation": "Precision = 0.667, Recall = 0.5, F1 ≈ 0.57–0.62. The model is moderately balanced."
+    },
+    {
+      "question": "Given the following confusion matrix:<br><br><table><tr><th></th><th>Predicted Positive</th><th>Predicted Negative</th></tr><tr><th>Actual Positive</th><td>50</td><td>50</td></tr><tr><th>Actual Negative</th><td>50</td><td>50</td></tr></table><br>What does an MCC of 0 indicate?",
+      "options": [
+        "The model performs no better than random",
+        "The model is highly accurate",
+        "The model is biased toward positives",
+        "The model has high precision"
+      ],
+      "answer": 0,
+      "explanation": "MCC = 0 means no correlation between predictions and actual labels."
+    },
+    {
+      "question": "Given the following confusion matrix:<br><br><table><tr><th></th><th>Predicted Positive</th><th>Predicted Negative</th></tr><tr><th>Actual Positive</th><td>95</td><td>5</td></tr><tr><th>Actual Negative</th><td>80</td><td>20</td></tr></table><br>What does this model’s performance suggest?",
+      "options": [
+        "It’s excellent overall",
+        "It catches positives but mislabels many negatives",
+        "It’s balanced",
+        "It’s cautious with predictions"
+      ],
+      "answer": 1,
+      "explanation": "Accuracy = 57.5%; Specificity = 20%. The model is poor at identifying negatives."
+    },
+    {
+      "question": "Given the following confusion matrix:<br><br><table><tr><th></th><th>Predicted Positive</th><th>Predicted Negative</th></tr><tr><th>Actual Positive</th><td>10</td><td>90</td></tr><tr><th>Actual Negative</th><td>5</td><td>95</td></tr></table><br>What does this model prioritize?",
+      "options": [
+        "Catching all positives",
+        "Avoiding false positives",
+        "Maximizing recall",
+        "Random guessing"
+      ],
+      "answer": 1,
+      "explanation": "Recall = 10%; Specificity = 95%. The model avoids false positives but misses most actual positives."
+    },
+    {
+      "question": "Given the following confusion matrix:<br><br><table><tr><th></th><th>Predicted Positive</th><th>Predicted Negative</th></tr><tr><th>Actual Positive</th><td>45</td><td>15</td></tr><tr><th>Actual Negative</th><td>10</td><td>30</td></tr></table><br>Which metric is likely to be highest?",
+      "options": [
+        "Accuracy",
+        "Precision",
+        "F1-Score",
+        "MCC"
+      ],
+      "answer": 2,
+      "explanation": "Precision = 81.8%, Recall = 75%, F1 ≈ 78%. Strong balance between precision and recall."
+    },
+    {
+      "question": "A fraud detection model produces the following confusion matrix:<br><br><table><tr><th></th><th>Predicted Fraud</th><th>Predicted Legit</th></tr><tr><th>Actual Fraud</th><td>30</td><td>70</td></tr><tr><th>Actual Legit</th><td>10</td><td>90</td></tr></table><br>What does this model’s behavior suggest?",
+      "options": [
+        "It catches most fraud cases but mislabels many legitimate users",
+        "It balances precision and recall well",
+        "It avoids flagging legitimate users but catches most fraud",
+        "It is cautious about flagging fraud and misses many actual cases"
+      ],
+      "answer": 3,
+      "explanation": "Recall is low (30%), meaning most fraud cases are missed. Precision is moderate (75%), and false positives are relatively few. The model is conservative in flagging fraud, prioritizing caution over coverage."
+    },
+    {
+      "question": "Two models have the same accuracy of 85%, but one has an MCC of 0.82 and the other has an MCC of 0.35. What does this tell you?",
+      "options": [
+        "The model with lower MCC is better at identifying positives",
+        "Accuracy is all that matters, so they are equally good",
+        "The model with higher MCC has more balanced predictions",
+        "MCC only matters for multi-class problems"
+      ],
+      "answer": 2,
+      "explanation": "MCC reflects the balance between true and false predictions across both classes. A higher MCC indicates better overall correlation between predictions and actual labels, even if accuracy is the same."
+    }
+  ]
+}
