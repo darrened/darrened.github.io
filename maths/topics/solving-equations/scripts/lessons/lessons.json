@@ -1,0 +1,965 @@
+
+{
+  "1": {
+    "title": "Question 1 - Basic linear equations",
+    "original": "<mn>6</mn><mi>m</mi><mo>+</mo><mn>11</mn><mo>=</mo><mn>25</mn><mo>−</mo><mi>m</mi>",
+    "given": "",
+    "steps": [
+      {
+        "expected": "6m + 11 + m = 25 - m + m",
+        "mathml": "<mn>6</mn><mi>m</mi><mo>+</mo><mn>11</mn><mo>+</mo><mi>m</mi><mo>=</mo><mn>25</mn><mo>−</mo><mi>m</mi><mo>+</mo><mi>m</mi>",
+        "prompt": "Move the variable term from the right-hand side to the left.",
+        "hint": "Add m to both sides of the equation. Remember that whatever you do to one side, you must also do to the other."
+      },
+      {
+        "expected": "7m + 11 = 25",
+        "mathml": "<mn>7</mn><mi>m</mi><mo>+</mo><mn>11</mn><mo>=</mo><mn>25</mn>",
+        "prompt": "Now simplify both sides.",
+        "hint": "Collect the like terms on the left. What is 6m + m? What happens to -m + m on the right?"
+      },
+      {
+        "expected": "7m + 11 - 11 = 25 - 11",
+        "mathml": "<mn>7</mn><mi>m</mi><mo>+</mo><mn>11</mn><mo>−</mo><mn>11</mn><mo>=</mo><mn>25</mn><mo>−</mo><mn>11</mn>",
+        "prompt": "Remove the constant term from the left-hand side.",
+        "hint": "Subtract 11 from both sides to leave the variable term on its own."
+      },
+      {
+        "expected": "7m = 14",
+        "mathml": "<mn>7</mn><mi>m</mi><mo>=</mo><mn>14</mn>",
+        "prompt": "Simplify both sides.",
+        "hint": "Calculate 11 - 11 on the left and 25 - 11 on the right."
+      },
+      {
+        "expected": "7m/7 = 14/7",
+        "mathml": "<mfrac><mrow><mn>7</mn><mi>m</mi></mrow><mn>7</mn></mfrac><mo>=</mo><mfrac><mn>14</mn><mn>7</mn></mfrac>",
+        "prompt": "Get m on its own.",
+        "hint": "Divide both sides by 7. Remember to divide the entire left-hand side and the right-hand side by 7."
+      },
+      {
+        "expected": "m = 2",
+        "mathml": "<mi>m</mi><mo>=</mo><mn>2</mn>",
+        "prompt": "Simplify your final equation.",
+        "hint": "Calculate 7m divided by 7 and 14 divided by 7. Congratulations, you've solved the equation!"
+      }
+    ]
+  },
+  "2": {
+    "title": "Question 2 - Equations with decimals",
+    "original": "<mn>1.2</mn><mi>x</mi><mo>−</mo><mn>0.8</mn><mo>=</mo><mn>0.8</mn><mi>x</mi><mo>+</mo><mn>1.2</mn>",
+    "given": "",
+    "steps": [
+      {
+        "expected": "1.2x - 0.8 - 0.8x = 0.8x + 1.2 - 0.8x",
+        "mathml": "<mn>1.2</mn><mi>x</mi><mo>−</mo><mn>0.8</mn><mo>−</mo><mn>0.8</mn><mi>x</mi><mo>=</mo><mn>0.8</mn><mi>x</mi><mo>+</mo><mn>1.2</mn><mo>−</mo><mn>0.8</mn><mi>x</mi>",
+        "prompt": "Move the variable term from the right-hand side to the left.",
+        "hint": "Subtract 0.8x from both sides. Remember to perform the same operation on each side."
+      },
+      {
+        "expected": "0.4x - 0.8 = 1.2",
+        "mathml": "<mn>0.4</mn><mi>x</mi><mo>−</mo><mn>0.8</mn><mo>=</mo><mn>1.2</mn>",
+        "prompt": "Simplify both sides.",
+        "hint": "Combine 1.2x and -0.8x on the left. On the right, the two 0.8x terms cancel out."
+      },
+      {
+        "expected": "0.4x - 0.8 + 0.8 = 1.2 + 0.8",
+        "mathml": "<mn>0.4</mn><mi>x</mi><mo>−</mo><mn>0.8</mn><mo>+</mo><mn>0.8</mn><mo>=</mo><mn>1.2</mn><mo>+</mo><mn>0.8</mn>",
+        "prompt": "Remove the constant term from the left-hand side.",
+        "hint": "Add 0.8 to both sides to eliminate the negative 0.8 on the left."
+      },
+      {
+        "expected": "0.4x = 2",
+        "mathml": "<mn>0.4</mn><mi>x</mi><mo>=</mo><mn>2</mn>",
+        "prompt": "Simplify both sides.",
+        "hint": "Calculate -0.8 + 0.8 on the left and 1.2 + 0.8 on the right."
+      },
+      {
+        "expected": "0.4x/0.4 = 2/0.4",
+        "mathml": "<mfrac><mrow><mn>0.4</mn><mi>x</mi></mrow><mn>0.4</mn></mfrac><mo>=</mo><mfrac><mn>2</mn><mn>0.4</mn></mfrac>",
+        "prompt": "Get x on its own.",
+        "hint": "Divide both sides by 0.4."
+      },
+      {
+        "expected": "x = 5",
+        "mathml": "<mi>x</mi><mo>=</mo><mn>5</mn>",
+        "prompt": "Simplify your final equation.",
+        "hint": "Calculate 0.4x divided by 0.4 and 2 divided by 0.4."
+      }
+    ]
+  },
+  "3": {
+    "title": "Question 3 - Equations with brackets",
+    "original": "<mn>5</mn><mo>(</mo><mi>m</mi><mo>−</mo><mn>2</mn><mo>)</mo><mo>=</mo><mn>15</mn>",
+    "given": "",
+    "steps": [
+      {
+        "expected": "5(m-2)/5 = 15/5",
+        "mathml": "<mfrac><mrow><mn>5</mn><mo>(</mo><mi>m</mi><mo>−</mo><mn>2</mn><mo>)</mo></mrow><mn>5</mn></mfrac><mo>=</mo><mfrac><mn>15</mn><mn>5</mn></mfrac>",
+        "prompt": "Remove the multiplication outside the brackets.",
+        "hint": "Divide both sides of the equation by 5. This will leave the expression inside the brackets on the left."
+      },
+      {
+        "expected": "m - 2 = 3",
+        "mathml": "<mi>m</mi><mo>−</mo><mn>2</mn><mo>=</mo><mn>3</mn>",
+        "prompt": "Simplify both sides.",
+        "hint": "Calculate 5 divided by 5 on the left and 15 divided by 5 on the right."
+      },
+      {
+        "expected": "m - 2 + 2 = 3 + 2",
+        "mathml": "<mi>m</mi><mo>−</mo><mn>2</mn><mo>+</mo><mn>2</mn><mo>=</mo><mn>3</mn><mo>+</mo><mn>2</mn>",
+        "prompt": "Remove the negative 2 from the left-hand side.",
+        "hint": "Add 2 to both sides of the equation."
+      },
+      {
+        "expected": "m = 5",
+        "mathml": "<mi>m</mi><mo>=</mo><mn>5</mn>",
+        "prompt": "Simplify your final equation.",
+        "hint": "Calculate -2 + 2 on the left and 3 + 2 on the right. You've found m!"
+      }
+    ]
+  },
+  "4": {
+    "title": "Question 4 - Expanding brackets",
+    "original": "<mn>3</mn><mo>(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo>)</mo><mo>−</mo><mn>4</mn><mo>(</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mo>)</mo><mo>=</mo><mn>14</mn>",
+    "given": "",
+    "steps": [
+      {
+        "expected": "x*3-1*3+2*x*-4+3*-4=14",
+        "mathml": "<mi>x</mi><mo>×</mo><mn>3</mn><mo>−</mo><mn>1</mn><mo>×</mo><mn>3</mn><mo>+</mo><mn>2</mn><mo>×</mo><mi>x</mi><mo>×</mo><mo>−</mo><mn>4</mn><mo>+</mo><mn>3</mn><mo>×</mo><mo>−</mo><mn>4</mn><mo>=</mo><mn>14</mn>",
+        "prompt": "Expand both sets of brackets.",
+        "hint": "Multiply x and -1 by 3. Then multiply 2x and 3 by -4. Keep the multiplications visible."
+      },
+      {
+        "expected": "3x-3-8x-12=14",
+        "mathml": "<mn>3</mn><mi>x</mi><mo>−</mo><mn>3</mn><mo>−</mo><mn>8</mn><mi>x</mi><mo>−</mo><mn>12</mn><mo>=</mo><mn>14</mn>",
+        "prompt": "Calculate the multiplications.",
+        "hint": "Work out each multiplication, paying particular attention to the negative signs."
+      },
+      {
+        "expected": "3x-3-8x-12+8x=14+8x",
+        "mathml": "<mn>3</mn><mi>x</mi><mo>−</mo><mn>3</mn><mo>−</mo><mn>8</mn><mi>x</mi><mo>−</mo><mn>12</mn><mo>+</mo><mn>8</mn><mi>x</mi><mo>=</mo><mn>14</mn><mo>+</mo><mn>8</mn><mi>x</mi>",
+        "prompt": "Move the negative 8x term to the other side.",
+        "hint": "Add 8x to both sides. Remember to show the operation before simplifying."
+      },
+      {
+        "expected": "3x-3-12=14+8x",
+        "mathml": "<mn>3</mn><mi>x</mi><mo>−</mo><mn>3</mn><mo>−</mo><mn>12</mn><mo>=</mo><mn>14</mn><mo>+</mo><mn>8</mn><mi>x</mi>",
+        "prompt": "Simplify the variable terms.",
+        "hint": "The -8x and +8x on the left cancel each other out. Remove them."
+      },
+      {
+        "expected": "3x-15=14+8x",
+        "mathml": "<mn>3</mn><mi>x</mi><mo>−</mo><mn>15</mn><mo>=</mo><mn>14</mn><mo>+</mo><mn>8</mn><mi>x</mi>",
+        "prompt": "Now simplify the constants on the left.",
+        "hint": "Combine -3 and -12."
+      },
+      {
+        "expected": "3x-15-8x=14+8x-8x",
+        "mathml": "<mn>3</mn><mi>x</mi><mo>−</mo><mn>15</mn><mo>−</mo><mn>8</mn><mi>x</mi><mo>=</mo><mn>14</mn><mo>+</mo><mn>8</mn><mi>x</mi><mo>−</mo><mn>8</mn><mi>x</mi>",
+        "prompt": "Move the remaining variable term to the left.",
+        "hint": "Subtract 8x from both sides."
+      },
+      {
+        "expected": "-5x-15=14",
+        "mathml": "<mo>−</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>15</mn><mo>=</mo><mn>14</mn>",
+        "prompt": "Simplify both sides.",
+        "hint": "Combine 3x and -8x. The 8x terms on the right cancel."
+      },
+      {
+        "expected": "-5x-15+15=14+15",
+        "mathml": "<mo>−</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>15</mn><mo>+</mo><mn>15</mn><mo>=</mo><mn>14</mn><mo>+</mo><mn>15</mn>",
+        "prompt": "Remove the constant from the left.",
+        "hint": "Add 15 to both sides."
+      },
+      {
+        "expected": "-5x=29",
+        "mathml": "<mo>−</mo><mn>5</mn><mi>x</mi><mo>=</mo><mn>29</mn>",
+        "prompt": "Simplify both sides.",
+        "hint": "Calculate -15 + 15 and 14 + 15."
+      },
+      {
+        "expected": "-5x/-5=29/-5",
+        "mathml": "<mfrac><mrow><mo>−</mo><mn>5</mn><mi>x</mi></mrow><mrow><mo>−</mo><mn>5</mn></mrow></mfrac><mo>=</mo><mfrac><mn>29</mn><mrow><mo>−</mo><mn>5</mn></mrow></mfrac>",
+        "prompt": "Divide both sides by -5 to isolate x.",
+        "hint": "Divide the entire left-hand side and right-hand side by -5. Remember that a negative divided by a negative is positive."
+      },
+      {
+        "expected": "x=29/-5",
+        "mathml": "<mi>x</mi><mo>=</mo><mfrac><mn>29</mn><mrow><mo>−</mo><mn>5</mn></mrow></mfrac>",
+        "prompt": "Simplify the left-hand side.",
+        "hint": "Calculate -5x divided by -5. Remember that a negative divided by a negative is positive."
+      }
+    ]
+  },
+  "5": {
+    "title": "Question 5 - Brackets on both sides",
+    "original": "<mn>4</mn><mo>(</mo><mi>x</mi><mo>−</mo><mn>5</mn><mo>)</mo><mo>=</mo><mn>7</mn><mo>−</mo><mn>5</mn><mo>(</mo><mn>3</mn><mo>−</mo><mn>2</mn><mi>x</mi><mo>)</mo>",
+    "given": "",
+    "steps": [
+      {
+        "expected": "4*x-5*4=7+3*-5-2x*-5",
+        "mathml": "<mn>4</mn><mo>×</mo><mi>x</mi><mo>−</mo><mn>5</mn><mo>×</mo><mn>4</mn><mo>=</mo><mn>7</mn><mo>+</mo><mn>3</mn><mo>×</mo><mo>−</mo><mn>5</mn><mo>−</mo><mn>2</mn><mi>x</mi><mo>×</mo><mo>−</mo><mn>5</mn>",
+        "prompt": "Expand both sets of brackets, keeping the multiplications visible.",
+        "hint": "Multiply both terms inside the first bracket by 4. Then multiply both terms inside the second bracket by -5. Remember that the minus sign outside the second bracket belongs to the multiplier."
+      },
+      {
+        "expected": "4x-20=7-15+10x",
+        "mathml": "<mn>4</mn><mi>x</mi><mo>−</mo><mn>20</mn><mo>=</mo><mn>7</mn><mo>−</mo><mn>15</mn><mo>+</mo><mn>10</mn><mi>x</mi>",
+        "prompt": "Now calculate all the multiplications.",
+        "hint": "Calculate 5 × 4, 3 × -5 and -2x × -5. Pay particular attention to the signs."
+      },
+      {
+        "expected": "4x-20-10x=7-15+10x-10x",
+        "mathml": "<mn>4</mn><mi>x</mi><mo>−</mo><mn>20</mn><mo>−</mo><mn>10</mn><mi>x</mi><mo>=</mo><mn>7</mn><mo>−</mo><mn>15</mn><mo>+</mo><mn>10</mn><mi>x</mi><mo>−</mo><mn>10</mn><mi>x</mi>",
+        "prompt": "Move the variable term from the right-hand side to the left.",
+        "hint": "Subtract 10x from both sides. Remember that whatever you do to one side, you must also do to the other."
+      },
+      {
+        "expected": "-6x-20=7-15",
+        "mathml": "<mo>−</mo><mn>6</mn><mi>x</mi><mo>−</mo><mn>20</mn><mo>=</mo><mn>7</mn><mo>−</mo><mn>15</mn>",
+        "prompt": "Simplify both sides of the equation.",
+        "hint": "Combine 4x and -10x on the left. The 10x terms on the right cancel each other out."
+      },
+      {
+        "expected": "-6x-20+20=7-15+20",
+        "mathml": "<mo>−</mo><mn>6</mn><mi>x</mi><mo>−</mo><mn>20</mn><mo>+</mo><mn>20</mn><mo>=</mo><mn>7</mn><mo>−</mo><mn>15</mn><mo>+</mo><mn>20</mn>",
+        "prompt": "Remove the constant term from the left-hand side.",
+        "hint": "Add 20 to both sides of the equation."
+      },
+      {
+        "expected": "-6x=12",
+        "mathml": "<mo>−</mo><mn>6</mn><mi>x</mi><mo>=</mo><mn>12</mn>",
+        "prompt": "Simplify both sides.",
+        "hint": "Calculate -20 + 20 on the left and 7 - 15 + 20 on the right."
+      },
+      {
+        "expected": "-6x/-6=12/-6",
+        "mathml": "<mfrac><mrow><mo>−</mo><mn>6</mn><mi>x</mi></mrow><mrow><mo>−</mo><mn>6</mn></mrow></mfrac><mo>=</mo><mfrac><mn>12</mn><mrow><mo>−</mo><mn>6</mn></mrow></mfrac>",
+        "prompt": "Isolate x.",
+        "hint": "Divide the entire left-hand side and right-hand side by -6."
+      },
+      {
+        "expected": "x=-2",
+        "mathml": "<mi>x</mi><mo>=</mo><mo>−</mo><mn>2</mn>",
+        "prompt": "Simplify your final equation to find x.",
+        "hint": "Calculate -6x divided by -6 and 12 divided by -6."
+      }
+    ]
+  },
+  "6": {
+    "title": "Question 6 - Variables on both sides",
+    "original": "<mn>3</mn><mi>x</mi><mo>=</mo><mn>5</mn><mo>(</mo><mn>9</mn><mo>−</mo><mi>x</mi><mo>)</mo>",
+    "given": "",
+    "steps": [
+      {
+        "expected": "3x = 9*5 - x*5",
+        "mathml": "<mn>3</mn><mi>x</mi><mo>=</mo><mn>9</mn><mo>×</mo><mn>5</mn><mo>−</mo><mi>x</mi><mo>×</mo><mn>5</mn>",
+        "prompt": "Expand the bracket on the right.",
+        "hint": "Multiply both 9 and -x by 5."
+      },
+      {
+        "expected": "3x = 45 - 5x",
+        "mathml": "<mn>3</mn><mi>x</mi><mo>=</mo><mn>45</mn><mo>−</mo><mn>5</mn><mi>x</mi>",
+        "prompt": "Simplify the multiplication.",
+        "hint": "Calculate 9 multiplied by 5 and write x multiplied by 5 as 5x."
+      },
+      {
+        "expected": "3x + 5x = 45 - 5x + 5x",
+        "mathml": "<mn>3</mn><mi>x</mi><mo>+</mo><mn>5</mn><mi>x</mi><mo>=</mo><mn>45</mn><mo>−</mo><mn>5</mn><mi>x</mi><mo>+</mo><mn>5</mn><mi>x</mi>",
+        "prompt": "Move the variable term to the left.",
+        "hint": "Add 5x to both sides."
+      },
+      {
+        "expected": "8x = 45",
+        "mathml": "<mn>8</mn><mi>x</mi><mo>=</mo><mn>45</mn>",
+        "prompt": "Simplify both sides.",
+        "hint": "Combine 3x and 5x. The two 5x terms on the right cancel."
+      },
+      {
+        "expected": "8x/8 = 45/8",
+        "mathml": "<mfrac><mrow><mn>8</mn><mi>x</mi></mrow><mn>8</mn></mfrac><mo>=</mo><mfrac><mn>45</mn><mn>8</mn></mfrac>",
+        "prompt": "Isolate x by dividing both sides by 8.",
+        "hint": "Divide both sides by 8. You can leave the answer as a fraction."
+      },
+      {
+        "expected": "x = 45/8",
+        "mathml": "<mi>x</mi><mo>=</mo><mfrac><mn>45</mn><mn>8</mn></mfrac>",
+        "prompt": "Simplify the left-hand side.",
+        "hint": "8x divided by 8 becomes x. The right-hand side is 45/8, which is also 5.625."
+      }
+    ]
+  },
+  "7": {
+    "title": "Question 7 - Fractions and common denominators",
+    "original": "<mfrac><mi>x</mi><mn>5</mn></mfrac><mo>−</mo><mfrac><mi>x</mi><mn>3</mn></mfrac><mo>=</mo><mn>2</mn>",
+    "given": "",
+    "steps": [
+      {
+        "expected": "3x/15 - 5x/15 = 2",
+        "mathml": "<mfrac><mrow><mn>3</mn><mi>x</mi></mrow><mn>15</mn></mfrac><mo>−</mo><mfrac><mrow><mn>5</mn><mi>x</mi></mrow><mn>15</mn></mfrac><mo>=</mo><mn>2</mn>",
+        "prompt": "Find a common denominator for the two fractions.",
+        "hint": "The denominators are 5 and 3. Their lowest common denominator is 15. What must you multiply each numerator and denominator by?"
+      },
+      {
+        "expected": "(3x-5x)/15 = 2",
+        "mathml": "<mfrac><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>5</mn><mi>x</mi></mrow><mn>15</mn></mfrac><mo>=</mo><mn>2</mn>",
+        "prompt": "Combine the two fractions into one.",
+        "hint": "Because the denominators are now the same, you can combine the numerators while keeping the denominator of 15."
+      },
+      {
+        "expected": "-2x/15 = 2",
+        "mathml": "<mfrac><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mn>15</mn></mfrac><mo>=</mo><mn>2</mn>",
+        "prompt": "Simplify the numerator.",
+        "hint": "Calculate 3x minus 5x."
+      },
+      {
+        "expected": "(-2x/15)*15 = 2*15",
+        "mathml": "<mfrac><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mn>15</mn></mfrac><mo>×</mo><mn>15</mn><mo>=</mo><mn>2</mn><mo>×</mo><mn>15</mn>",
+        "prompt": "Get rid of the denominator.",
+        "hint": "Multiply both sides by 15. This will cancel the denominator on the left."
+      },
+      {
+        "expected": "-2x = 30",
+        "mathml": "<mo>−</mo><mn>2</mn><mi>x</mi><mo>=</mo><mn>30</mn>",
+        "prompt": "Simplify both sides.",
+        "hint": "The denominator of 15 cancels with multiplication by 15. Calculate 2 multiplied by 15."
+      },
+      {
+        "expected": "-2x/-2 = 30/-2",
+        "mathml": "<mfrac><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mrow><mo>−</mo><mn>2</mn></mrow></mfrac><mo>=</mo><mfrac><mn>30</mn><mrow><mo>−</mo><mn>2</mn></mrow></mfrac>",
+        "prompt": "Isolate x by dividing both sides by -2.",
+        "hint": "Divide both sides by -2. Pay attention to the signs."
+      },
+      {
+        "expected": "x = -15",
+        "mathml": "<mi>x</mi><mo>=</mo><mo>−</mo><mn>15</mn>",
+        "prompt": "Simplify your final equation.",
+        "hint": "Calculate -2x divided by -2 and 30 divided by -2."
+      }
+    ]
+  },
+  "8": {
+    "title": "Question 8 - Fractions and common denominators",
+    "original": "<mn>3</mn><mi>m</mi><mo>+</mo><mfrac><mn>3</mn><mn>4</mn></mfrac><mo>=</mo><mn>2</mn><mo>+</mo><mfrac><mrow><mn>2</mn><mi>m</mi></mrow><mn>3</mn></mfrac>",
+    "given": "",
+    "steps": [
+      {
+        "expected": "3m + 9/12 = 2 + 8m/12",
+        "mathml": "<mn>3</mn><mi>m</mi><mo>+</mo><mfrac><mn>9</mn><mn>12</mn></mfrac><mo>=</mo><mn>2</mn><mo>+</mo><mfrac><mrow><mn>8</mn><mi>m</mi></mrow><mn>12</mn></mfrac>",
+        "prompt": "Find a common denominator for the fractions.",
+        "hint": "The denominators are 4 and 3. Their lowest common denominator is 12. What must you multiply the numerator and denominator of the fractions by?"
+      },
+      {
+        "expected": "3m*12 + 9/12*12 = 2*12 + 8m/12*12",
+        "mathml": "<mn>3</mn><mi>m</mi><mo>×</mo><mn>12</mn><mo>+</mo><mfrac><mn>9</mn><mn>12</mn></mfrac><mo>×</mo><mn>12</mn><mo>=</mo><mn>2</mn><mo>×</mo><mn>12</mn><mo>+</mo><mfrac><mrow><mn>8</mn><mi>m</mi></mrow><mn>12</mn></mfrac><mo>×</mo><mn>12</mn>",
+        "prompt": "Multiply both sides by the common denominator.",
+        "hint": "Multiply every term on both sides by 12. Don't forget the whole terms, including 3m and 2."
+      },
+      {
+        "expected": "36m + 9 = 24 + 8m",
+        "mathml": "<mn>36</mn><mi>m</mi><mo>+</mo><mn>9</mn><mo>=</mo><mn>24</mn><mo>+</mo><mn>8</mn><mi>m</mi>",
+        "prompt": "Now calculate the multiplications.",
+        "hint": "Work through each multiplication. The denominators of the fractions cancel with the multiplication by 12."
+      },
+      {
+        "expected": "36m + 9 - 8m = 24 + 8m - 8m",
+        "mathml": "<mn>36</mn><mi>m</mi><mo>+</mo><mn>9</mn><mo>−</mo><mn>8</mn><mi>m</mi><mo>=</mo><mn>24</mn><mo>+</mo><mn>8</mn><mi>m</mi><mo>−</mo><mn>8</mn><mi>m</mi>",
+        "prompt": "Move the variable term on the right to the left.",
+        "hint": "Subtract 8m from both sides. Remember to show the subtraction on both sides before simplifying."
+      },
+      {
+        "expected": "28m + 9 = 24",
+        "mathml": "<mn>28</mn><mi>m</mi><mo>+</mo><mn>9</mn><mo>=</mo><mn>24</mn>",
+        "prompt": "Simplify both sides.",
+        "hint": "Combine 36m and -8m. The two 8m terms on the right cancel out."
+      },
+      {
+        "expected": "28m + 9 - 9 = 24 - 9",
+        "mathml": "<mn>28</mn><mi>m</mi><mo>+</mo><mn>9</mn><mo>−</mo><mn>9</mn><mo>=</mo><mn>24</mn><mo>−</mo><mn>9</mn>",
+        "prompt": "Remove the constant from the left-hand side.",
+        "hint": "Subtract 9 from both sides of the equation."
+      },
+      {
+        "expected": "28m = 15",
+        "mathml": "<mn>28</mn><mi>m</mi><mo>=</mo><mn>15</mn>",
+        "prompt": "Simplify both sides.",
+        "hint": "Calculate 9 - 9 on the left and 24 - 9 on the right."
+      },
+      {
+        "expected": "28m/28 = 15/28",
+        "mathml": "<mfrac><mrow><mn>28</mn><mi>m</mi></mrow><mn>28</mn></mfrac><mo>=</mo><mfrac><mn>15</mn><mn>28</mn></mfrac>",
+        "prompt": "Isolate m by dividing both sides by 28.",
+        "hint": "Divide the entire left-hand side and right-hand side by 28."
+      },
+      {
+        "expected": "m = 15/28",
+        "mathml": "<mi>m</mi><mo>=</mo><mfrac><mn>15</mn><mn>28</mn></mfrac>",
+        "prompt": "Simplify your final equation.",
+        "hint": "28m divided by 28 leaves just m. The fraction on the right cannot be simplified further."
+      }
+    ]
+  },
+  "9": {
+    "title": "Question 9 - Fractions with a variable denominator",
+    "original": "<mfrac><mn>4</mn><mi>t</mi></mfrac><mo>=</mo><mfrac><mn>2</mn><mn>3</mn></mfrac>",
+    "given": "",
+    "steps": [
+      {
+        "expected": "4/t*t = 2*t/3",
+        "mathml": "<mfrac><mn>4</mn><mi>t</mi></mfrac><mo>×</mo><mi>t</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mi>t</mi></mrow><mn>3</mn></mfrac>",
+        "prompt": "Get rid of the denominator containing t.",
+        "hint": "Multiply both sides by t. Remember that whatever you do to one side, you must also do to the other."
+      },
+      {
+        "expected": "4 = 2t/3",
+        "mathml": "<mn>4</mn><mo>=</mo><mfrac><mrow><mn>2</mn><mi>t</mi></mrow><mn>3</mn></mfrac>",
+        "prompt": "Simplify the equation.",
+        "hint": "On the left, the t in the denominator cancels with the multiplication by t."
+      },
+      {
+        "expected": "4*3 = (2t/3)*3",
+        "mathml": "<mn>4</mn><mo>×</mo><mn>3</mn><mo>=</mo><mfrac><mrow><mn>2</mn><mi>t</mi></mrow><mn>3</mn></mfrac><mo>×</mo><mn>3</mn>",
+        "prompt": "Remove the remaining denominator.",
+        "hint": "Multiply both sides by 3 to cancel the denominator on the right."
+      },
+      {
+        "expected": "12 = 2t",
+        "mathml": "<mn>12</mn><mo>=</mo><mn>2</mn><mi>t</mi>",
+        "prompt": "Calculate the multiplications.",
+        "hint": "Calculate 4 × 3. The denominator of 3 on the right cancels with the multiplication by 3."
+      },
+      {
+        "expected": "12/2 = 2t/2",
+        "mathml": "<mfrac><mn>12</mn><mn>2</mn></mfrac><mo>=</mo><mfrac><mrow><mn>2</mn><mi>t</mi></mrow><mn>2</mn></mfrac>",
+        "prompt": "Isolate t by dividing both sides by 2.",
+        "hint": "Divide the entire left-hand side and right-hand side by 2."
+      },
+      {
+        "expected": "t = 6",
+        "mathml": "<mi>t</mi><mo>=</mo><mn>6</mn>",
+        "prompt": "Simplify your final equation.",
+        "hint": "Calculate 12 divided by 2. On the right, 2t divided by 2 leaves just t."
+      }
+    ]
+  },
+  "10": {
+    "title": "Question 10 - Combining fractions with like variables",
+    "original": "<mfrac><mn>4</mn><mn>7</mn></mfrac><mi>y</mi><mo>−</mo><mfrac><mn>3</mn><mn>5</mn></mfrac><mi>y</mi><mo>=</mo><mn>2</mn>",
+    "given": "",
+    "steps": [
+      {
+        "expected": "((4*5)/35)y - ((3*7)/35)y = 2",
+        "mathml": "<mfrac><mrow><mn>4</mn><mo>×</mo><mn>5</mn></mrow><mn>35</mn></mfrac><mi>y</mi><mo>−</mo><mfrac><mrow><mn>3</mn><mo>×</mo><mn>7</mn></mrow><mn>35</mn></mfrac><mi>y</mi><mo>=</mo><mn>2</mn>",
+        "prompt": "Find a common denominator.",
+        "hint": "Think about a number that both 7 and 5 divide into evenly. Convert both fractions so they have that denominator, multiplying the numerator and denominator of each fraction by the appropriate amount."
+      },
+      {
+        "expected": "20y/35 - 21y/35 = 2",
+        "mathml": "<mfrac><mrow><mn>20</mn><mi>y</mi></mrow><mn>35</mn></mfrac><mo>−</mo><mfrac><mrow><mn>21</mn><mi>y</mi></mrow><mn>35</mn></mfrac><mo>=</mo><mn>2</mn>",
+        "prompt": "Simplify the fractions.",
+        "hint": "Calculate 4 × 5 and 3 × 7. Keep the denominators and variables unchanged."
+      },
+      {
+        "expected": "(20y - 21y)/35 = 2",
+        "mathml": "<mfrac><mrow><mn>20</mn><mi>y</mi><mo>−</mo><mn>21</mn><mi>y</mi></mrow><mn>35</mn></mfrac><mo>=</mo><mn>2</mn>",
+        "prompt": "Combine the fractions.",
+        "hint": "Both fractions have the same denominator, so you can combine their numerators while keeping the denominator of 35."
+      },
+      {
+        "expected": "-1y/35 = 2",
+        "mathml": "<mfrac><mrow><mo>−</mo><mn>1</mn><mi>y</mi></mrow><mn>35</mn></mfrac><mo>=</mo><mn>2</mn>",
+        "prompt": "Simplify the numerator.",
+        "hint": "Combine the like terms 20y − 21y. What do you get?"
+      },
+      {
+        "expected": "(-1*y)/35*35 = 2*35",
+        "mathml": "<mfrac><mrow><mo>−</mo><mn>1</mn><mi>y</mi></mrow><mn>35</mn></mfrac><mo>×</mo><mn>35</mn><mo>=</mo><mn>2</mn><mo>×</mo><mn>35</mn>",
+        "prompt": "Remove the denominator.",
+        "hint": "Multiply both sides of the equation by 35. Remember to multiply the entire left-hand side and the right-hand side."
+      },
+      {
+        "expected": "-1y = 70",
+        "mathml": "<mo>−</mo><mn>1</mn><mi>y</mi><mo>=</mo><mn>70</mn>",
+        "prompt": "Simplify both sides.",
+        "hint": "Calculate the multiplication on each side. What happens when you multiply a fraction by its denominator?"
+      },
+      {
+        "expected": "(-1*y)/-1 = 70/-1",
+        "mathml": "<mfrac><mrow><mo>−</mo><mn>1</mn><mi>y</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></mfrac><mo>=</mo><mfrac><mn>70</mn><mrow><mo>−</mo><mn>1</mn></mrow></mfrac>",
+        "prompt": "Isolate the variable.",
+        "hint": "Divide both sides by -1 to remove the negative coefficient."
+      },
+      {
+        "expected": "y = -70",
+        "mathml": "<mi>y</mi><mo>=</mo><mo>−</mo><mn>70</mn>",
+        "prompt": "Simplify your final equation.",
+        "hint": "Calculate -1y divided by -1 and 70 divided by -1."
+      }
+    ]
+  },
+  "11": {
+    "title": "Question 11 - Fractions with variables in the denominator",
+    "original": "<mfrac><mn>1</mn><mrow><mn>3</mn><mi>x</mi></mrow></mfrac><mo>+</mo><mfrac><mn>1</mn><mrow><mn>4</mn><mi>x</mi></mrow></mfrac><mo>=</mo><mfrac><mn>7</mn><mn>20</mn></mfrac>",
+    "given": "",
+    "steps": [
+      {
+        "expected": "(1*4)/(12*x) + (1*3)/(12*x) = 7/20",
+        "mathml": "<mfrac><mrow><mn>1</mn><mo>×</mo><mn>4</mn></mrow><mrow><mn>12</mn><mi>x</mi></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>1</mn><mo>×</mo><mn>3</mn></mrow><mrow><mn>12</mn><mi>x</mi></mrow></mfrac><mo>=</mo><mfrac><mn>7</mn><mn>20</mn></mfrac>",
+        "prompt": "Find a common denominator for the fractions on the left-hand side.",
+        "hint": "Focus only on the two fractions on the left. Their denominators are 3x and 4x. Their lowest common denominator is 12x. Convert both fractions so they have the same denominator. Leave the right-hand side unchanged."
+      },
+      {
+        "expected": "4/(12*x) + 3/(12*x) = 7/20",
+        "mathml": "<mfrac><mn>4</mn><mrow><mn>12</mn><mi>x</mi></mrow></mfrac><mo>+</mo><mfrac><mn>3</mn><mrow><mn>12</mn><mi>x</mi></mrow></mfrac><mo>=</mo><mfrac><mn>7</mn><mn>20</mn></mfrac>",
+        "prompt": "Simplify the numerators.",
+        "hint": "Calculate the multiplication in each numerator. Keep the denominators unchanged."
+      },
+      {
+        "expected": "7/(12*x) = 7/20",
+        "mathml": "<mfrac><mn>7</mn><mrow><mn>12</mn><mi>x</mi></mrow></mfrac><mo>=</mo><mfrac><mn>7</mn><mn>20</mn></mfrac>",
+        "prompt": "Combine the fractions.",
+        "hint": "The denominators are the same, so add the numerators together."
+      },
+      {
+        "expected": "(7/(12*x))/7 = (7/20)/7",
+        "mathml": "<mfrac><mfrac><mn>7</mn><mrow><mn>12</mn><mi>x</mi></mrow></mfrac><mn>7</mn></mfrac><mo>=</mo><mfrac><mfrac><mn>7</mn><mn>20</mn></mfrac><mn>7</mn></mfrac>",
+        "prompt": "Simplify the equation further.",
+        "hint": "Divide both sides by 7 to remove the numerator of 7 from each fraction."
+      },
+      {
+        "expected": "1/(12*x) = 1/20",
+        "mathml": "<mfrac><mn>1</mn><mrow><mn>12</mn><mi>x</mi></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>20</mn></mfrac>",
+        "prompt": "Simplify both sides.",
+        "hint": "Calculate 7 divided by 7 on each side."
+      },
+      {
+        "expected": "1/(12*x)*(12*x) = 1/20*(12*x)",
+        "mathml": "<mfrac><mn>1</mn><mrow><mn>12</mn><mi>x</mi></mrow></mfrac><mo>×</mo><mn>12</mn><mi>x</mi><mo>=</mo><mfrac><mn>1</mn><mn>20</mn></mfrac><mo>×</mo><mn>12</mn><mi>x</mi>",
+        "prompt": "Remove the variable denominator.",
+        "hint": "Multiply both sides by 12x to eliminate the denominator on the left."
+      },
+      {
+        "expected": "1 = 12*x/20",
+        "mathml": "<mn>1</mn><mo>=</mo><mfrac><mrow><mn>12</mn><mi>x</mi></mrow><mn>20</mn></mfrac>",
+        "prompt": "Simplify both sides.",
+        "hint": "Calculate the multiplication on each side. What happens when you multiply a fraction by its denominator?"
+      },
+      {
+        "expected": "1*20 = (12*x)/20*20",
+        "mathml": "<mn>1</mn><mo>×</mo><mn>20</mn><mo>=</mo><mfrac><mrow><mn>12</mn><mi>x</mi></mrow><mn>20</mn></mfrac><mo>×</mo><mn>20</mn>",
+        "prompt": "Remove the remaining denominator.",
+        "hint": "Multiply both sides by 20 to eliminate the denominator on the right."
+      },
+      {
+        "expected": "20 = 12*x",
+        "mathml": "<mn>20</mn><mo>=</mo><mn>12</mn><mi>x</mi>",
+        "prompt": "Simplify both sides.",
+        "hint": "Calculate the multiplication on each side."
+      },
+      {
+        "expected": "20/12 = (12*x)/12",
+        "mathml": "<mfrac><mn>20</mn><mn>12</mn></mfrac><mo>=</mo><mfrac><mrow><mn>12</mn><mi>x</mi></mrow><mn>12</mn></mfrac>",
+        "prompt": "Isolate the variable.",
+        "hint": "Divide both sides by 12 to leave x on its own."
+      },
+      {
+        "expected": "5/3 = x",
+        "mathml": "<mfrac><mn>5</mn><mn>3</mn></mfrac><mo>=</mo><mi>x</mi>",
+        "prompt": "Simplify your final equation.",
+        "hint": "Simplify 20/12 by dividing the numerator and denominator by their highest common factor."
+      }
+    ]
+  },
+  "12": {
+    "title": "Question 12 - Equations with fractions and brackets",
+    "original": "<mfrac><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow><mn>4</mn></mfrac><mo>−</mo><mfrac><mrow><mi>x</mi><mo>−</mo><mn>3</mn></mrow><mn>5</mn></mfrac><mo>=</mo><mn>2</mn>",
+    "given": "",
+    "steps": [
+      {
+        "expected": "((x+3)*5)/20 - ((x-3)*4)/20 = 2",
+        "mathml": "<mfrac><mrow><mo>(</mo><mi>x</mi><mo>+</mo><mn>3</mn><mo>)</mo><mo>×</mo><mn>5</mn></mrow><mn>20</mn></mfrac><mo>−</mo><mfrac><mrow><mo>(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo>)</mo><mo>×</mo><mn>4</mn></mrow><mn>20</mn></mfrac><mo>=</mo><mn>2</mn>",
+        "prompt": "Find a common denominator.",
+        "hint": "Find a number that both 4 and 5 divide into evenly. Adjust both fractions so they have this denominator, multiplying the numerator and denominator of each fraction by the appropriate amount."
+      },
+      {
+        "expected": "(5x+15)/20 + (-4x+12)/20 = 2",
+        "mathml": "<mfrac><mrow><mn>5</mn><mi>x</mi><mo>+</mo><mn>15</mn></mrow><mn>20</mn></mfrac><mo>+</mo><mfrac><mrow><mo>−</mo><mn>4</mn><mi>x</mi><mo>+</mo><mn>12</mn></mrow><mn>20</mn></mfrac><mo>=</mo><mn>2</mn>",
+        "prompt": "Expand the brackets.",
+        "hint": "Multiply each term inside the first bracket by 5. For the second bracket, remember that the negative 4 must multiply both terms, including the negative 3."
+      },
+      {
+        "expected": "((5x+15)/20)*20 + ((-4x+12)/20)*20 = 2*20",
+        "mathml": "<mfrac><mrow><mn>5</mn><mi>x</mi><mo>+</mo><mn>15</mn></mrow><mn>20</mn></mfrac><mo>×</mo><mn>20</mn><mo>+</mo><mfrac><mrow><mo>−</mo><mn>4</mn><mi>x</mi><mo>+</mo><mn>12</mn></mrow><mn>20</mn></mfrac><mo>×</mo><mn>20</mn><mo>=</mo><mn>2</mn><mo>×</mo><mn>20</mn>",
+        "prompt": "Remove the denominators.",
+        "hint": "Multiply both sides of the equation by 20 to eliminate the fractions."
+      },
+      {
+        "expected": "5x+15-4x+12 = 40",
+        "mathml": "<mn>5</mn><mi>x</mi><mo>+</mo><mn>15</mn><mo>−</mo><mn>4</mn><mi>x</mi><mo>+</mo><mn>12</mn><mo>=</mo><mn>40</mn>",
+        "prompt": "Simplify the equation.",
+        "hint": "Calculate the multiplications on both sides. Each fraction multiplied by 20 leaves its numerator."
+      },
+      {
+        "expected": "1x+15+12 = 40",
+        "mathml": "<mn>1</mn><mi>x</mi><mo>+</mo><mn>15</mn><mo>+</mo><mn>12</mn><mo>=</mo><mn>40</mn>",
+        "prompt": "Collect the variable terms.",
+        "hint": "Combine the like terms 5x and -4x. Leave the constant terms unchanged for now."
+      },
+      {
+        "expected": "1x+27 = 40",
+        "mathml": "<mn>1</mn><mi>x</mi><mo>+</mo><mn>27</mn><mo>=</mo><mn>40</mn>",
+        "prompt": "Combine the constants.",
+        "hint": "Add the two constant terms, 15 and 12."
+      },
+      {
+        "expected": "1x+27-27 = 40-27",
+        "mathml": "<mn>1</mn><mi>x</mi><mo>+</mo><mn>27</mn><mo>−</mo><mn>27</mn><mo>=</mo><mn>40</mn><mo>−</mo><mn>27</mn>",
+        "prompt": "Remove the constant term.",
+        "hint": "Subtract 27 from both sides to leave the variable term on its own."
+      },
+      {
+        "expected": "x = 13",
+        "mathml": "<mi>x</mi><mo>=</mo><mn>13</mn>",
+        "prompt": "Simplify your final equation.",
+        "hint": "Calculate 27 − 27 on the left and 40 − 27 on the right."
+      }
+    ]
+  },
+  "13": {
+    "title": "Question 13 - Equations with fractions and brackets",
+    "original": "<mfrac><mrow><mn>3</mn><mo>−</mo><mi>u</mi></mrow><mn>4</mn></mfrac><mo>=</mo><mfrac><mi>u</mi><mn>3</mn></mfrac>",
+    "given": "",
+    "steps": [
+      {
+        "expected": "3(3-u)/12 = 4u/12",
+        "mathml": "<mfrac><mrow><mn>3</mn><mo>(</mo><mn>3</mn><mo>−</mo><mi>u</mi><mo>)</mo></mrow><mn>12</mn></mfrac><mo>=</mo><mfrac><mrow><mn>4</mn><mi>u</mi></mrow><mn>12</mn></mfrac>",
+        "prompt": "Find a common denominator.",
+        "hint": "Find a number that both 4 and 3 divide into evenly. Adjust both fractions to have that denominator, multiplying the numerator and denominator of each fraction by the appropriate amount."
+      },
+      {
+        "expected": "3(3-u)/12*12 = 4u/12*12",
+        "mathml": "<mfrac><mrow><mn>3</mn><mo>(</mo><mn>3</mn><mo>−</mo><mi>u</mi><mo>)</mo></mrow><mn>12</mn></mfrac><mo>×</mo><mn>12</mn><mo>=</mo><mfrac><mrow><mn>4</mn><mi>u</mi></mrow><mn>12</mn></mfrac><mo>×</mo><mn>12</mn>",
+        "prompt": "Remove the denominators.",
+        "hint": "Multiply both sides of the equation by 12 to eliminate the fractions."
+      },
+      {
+        "expected": "3(3-u) = 4u",
+        "mathml": "<mn>3</mn><mo>(</mo><mn>3</mn><mo>−</mo><mi>u</mi><mo>)</mo><mo>=</mo><mn>4</mn><mi>u</mi>",
+        "prompt": "Simplify the equation.",
+        "hint": "Calculate the multiplication by 12 on both sides. The denominators will cancel out."
+      },
+      {
+        "expected": "3*3-u*3 = 4u",
+        "mathml": "<mn>3</mn><mo>×</mo><mn>3</mn><mo>−</mo><mi>u</mi><mo>×</mo><mn>3</mn><mo>=</mo><mn>4</mn><mi>u</mi>",
+        "prompt": "Expand the brackets.",
+        "hint": "Multiply each term inside the bracket by 3."
+      },
+      {
+        "expected": "9-3u = 4u",
+        "mathml": "<mn>9</mn><mo>−</mo><mn>3</mn><mi>u</mi><mo>=</mo><mn>4</mn><mi>u</mi>",
+        "prompt": "Simplify the multiplication.",
+        "hint": "Calculate 3 × 3 and u × 3."
+      },
+      {
+        "expected": "9-3u+3u = 4u+3u",
+        "mathml": "<mn>9</mn><mo>−</mo><mn>3</mn><mi>u</mi><mo>+</mo><mn>3</mn><mi>u</mi><mo>=</mo><mn>4</mn><mi>u</mi><mo>+</mo><mn>3</mn><mi>u</mi>",
+        "prompt": "Collect the variable terms.",
+        "hint": "Add 3u to both sides to eliminate the negative 3u on the left."
+      },
+      {
+        "expected": "9 = 7u",
+        "mathml": "<mn>9</mn><mo>=</mo><mn>7</mn><mi>u</mi>",
+        "prompt": "Simplify both sides.",
+        "hint": "Combine the variable terms on the right. What is 4u + 3u? The negative and positive 3u terms on the left cancel out."
+      },
+      {
+        "expected": "9/7 = 7u/7",
+        "mathml": "<mfrac><mn>9</mn><mn>7</mn></mfrac><mo>=</mo><mfrac><mrow><mn>7</mn><mi>u</mi></mrow><mn>7</mn></mfrac>",
+        "prompt": "Isolate the variable.",
+        "hint": "Divide both sides by 7 to leave u on its own."
+      },
+      {
+        "expected": "9/7 = u",
+        "mathml": "<mfrac><mn>9</mn><mn>7</mn></mfrac><mo>=</mo><mi>u</mi>",
+        "prompt": "Simplify your final equation.",
+        "hint": "Calculate 7u divided by 7. Congratulations, you've solved the equation!"
+      }
+    ]
+  },
+  "14": {
+    "title": "Question 14 - Equations with variable denominators",
+    "original": "<mfrac><mrow><mi>x</mi><mo>−</mo><mn>2</mn></mrow><mrow><mi>x</mi><mo>−</mo><mn>3</mn></mrow></mfrac><mo>=</mo><mn>3</mn>",
+    "given": "",
+    "steps": [
+      {
+        "expected": "(x-2)/(x-3)*(x-3) = 3*(x-3)",
+        "mathml": "<mfrac><mrow><mi>x</mi><mo>−</mo><mn>2</mn></mrow><mrow><mi>x</mi><mo>−</mo><mn>3</mn></mrow></mfrac><mo>×</mo><mo>(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo>)</mo><mo>=</mo><mn>3</mn><mo>×</mo><mo>(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo>)</mo>",
+        "prompt": "Remove the denominator.",
+        "hint": "Multiply both sides by the denominator, (x − 3), to eliminate the fraction."
+      },
+      {
+        "expected": "x-2 = 3*(x-3)",
+        "mathml": "<mi>x</mi><mo>−</mo><mn>2</mn><mo>=</mo><mn>3</mn><mo>(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo>)</mo>",
+        "prompt": "Simplify the equation.",
+        "hint": "The denominator on the left cancels with the multiplication by (x − 3)."
+      },
+      {
+        "expected": "x-2 = x*3-3*3",
+        "mathml": "<mi>x</mi><mo>−</mo><mn>2</mn><mo>=</mo><mi>x</mi><mo>×</mo><mn>3</mn><mo>−</mo><mn>3</mn><mo>×</mo><mn>3</mn>",
+        "prompt": "Expand the brackets.",
+        "hint": "Multiply each term inside the bracket by 3."
+      },
+      {
+        "expected": "x-2 = 3x-9",
+        "mathml": "<mi>x</mi><mo>−</mo><mn>2</mn><mo>=</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>9</mn>",
+        "prompt": "Simplify the multiplication.",
+        "hint": "Calculate 3 × x and 3 × 3."
+      },
+      {
+        "expected": "x-2-x = 3x-9-x",
+        "mathml": "<mi>x</mi><mo>−</mo><mn>2</mn><mo>−</mo><mi>x</mi><mo>=</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>9</mn><mo>−</mo><mi>x</mi>",
+        "prompt": "Collect the variable terms.",
+        "hint": "Subtract x from both sides to move the variable term on the left."
+      },
+      {
+        "expected": "-2 = 2x-9",
+        "mathml": "<mo>−</mo><mn>2</mn><mo>=</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>9</mn>",
+        "prompt": "Simplify both sides.",
+        "hint": "Combine the variable terms on the right. What is 3x − x?"
+      },
+      {
+        "expected": "-2+9 = 2x-9+9",
+        "mathml": "<mo>−</mo><mn>2</mn><mo>+</mo><mn>9</mn><mo>=</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>9</mn><mo>+</mo><mn>9</mn>",
+        "prompt": "Remove the constant term.",
+        "hint": "Add 9 to both sides to eliminate the negative 9 on the right."
+      },
+      {
+        "expected": "7 = 2x",
+        "mathml": "<mn>7</mn><mo>=</mo><mn>2</mn><mi>x</mi>",
+        "prompt": "Simplify both sides.",
+        "hint": "Calculate -2 + 9 on the left and -9 + 9 on the right."
+      },
+      {
+        "expected": "7/2 = 2x/2",
+        "mathml": "<mfrac><mn>7</mn><mn>2</mn></mfrac><mo>=</mo><mfrac><mrow><mn>2</mn><mi>x</mi></mrow><mn>2</mn></mfrac>",
+        "prompt": "Isolate the variable.",
+        "hint": "Divide both sides by 2 to leave x on its own."
+      },
+      {
+        "expected": "3.5 = x",
+        "mathml": "<mn>3.5</mn><mo>=</mo><mi>x</mi>",
+        "prompt": "Simplify your final equation.",
+        "hint": "Calculate 7 divided by 2. Congratulations, you've solved the equation!"
+      }
+    ]
+  },
+  "15": {
+    "title": "Question 15 - Equations with fractions on both sides",
+    "original": "<mfrac><mn>3</mn><mrow><mi>v</mi><mo>−</mo><mn>2</mn></mrow></mfrac><mo>=</mo><mfrac><mn>4</mn><mrow><mi>v</mi><mo>+</mo><mn>4</mn></mrow></mfrac>",
+    "given": "",
+    "steps": [
+      {
+        "expected": "3/(v-2)*(v-2) = 4/(v+4)*(v-2)",
+        "mathml": "<mfrac><mn>3</mn><mrow><mi>v</mi><mo>−</mo><mn>2</mn></mrow></mfrac><mo>×</mo><mo>(</mo><mi>v</mi><mo>−</mo><mn>2</mn><mo>)</mo><mo>=</mo><mfrac><mn>4</mn><mrow><mi>v</mi><mo>+</mo><mn>4</mn></mrow></mfrac><mo>×</mo><mo>(</mo><mi>v</mi><mo>−</mo><mn>2</mn><mo>)</mo>",
+        "prompt": "Remove a denominator.",
+        "hint": "Multiply both sides by (v − 2) to eliminate the denominator on the left."
+      },
+      {
+        "expected": "3 = 4*(v-2)/(v+4)",
+        "mathml": "<mn>3</mn><mo>=</mo><mfrac><mrow><mn>4</mn><mo>(</mo><mi>v</mi><mo>−</mo><mn>2</mn><mo>)</mo></mrow><mrow><mi>v</mi><mo>+</mo><mn>4</mn></mrow></mfrac>",
+        "prompt": "Simplify the equation.",
+        "hint": "The denominator on the left cancels with the multiplication. Simplify the right-hand side, keeping its remaining denominator."
+      },
+      {
+        "expected": "3*(v+4) = 4*(v-2)/(v+4)*(v+4)",
+        "mathml": "<mn>3</mn><mo>×</mo><mo>(</mo><mi>v</mi><mo>+</mo><mn>4</mn><mo>)</mo><mo>=</mo><mfrac><mrow><mn>4</mn><mo>(</mo><mi>v</mi><mo>−</mo><mn>2</mn><mo>)</mo></mrow><mrow><mi>v</mi><mo>+</mo><mn>4</mn></mrow></mfrac><mo>×</mo><mo>(</mo><mi>v</mi><mo>+</mo><mn>4</mn><mo>)</mo>",
+        "prompt": "Remove the remaining denominator.",
+        "hint": "Multiply both sides by (v + 4) to eliminate the denominator on the right."
+      },
+      {
+        "expected": "3*(v+4) = 4*(v-2)",
+        "mathml": "<mn>3</mn><mo>(</mo><mi>v</mi><mo>+</mo><mn>4</mn><mo>)</mo><mo>=</mo><mn>4</mn><mo>(</mo><mi>v</mi><mo>−</mo><mn>2</mn><mo>)</mo>",
+        "prompt": "Simplify the equation.",
+        "hint": "The denominator on the right cancels with the multiplication by (v + 4)."
+      },
+      {
+        "expected": "v*3+4*3 = v*4-2*4",
+        "mathml": "<mi>v</mi><mo>×</mo><mn>3</mn><mo>+</mo><mn>4</mn><mo>×</mo><mn>3</mn><mo>=</mo><mi>v</mi><mo>×</mo><mn>4</mn><mo>−</mo><mn>2</mn><mo>×</mo><mn>4</mn>",
+        "prompt": "Expand the brackets.",
+        "hint": "Multiply each term inside both brackets by the number outside its bracket."
+      },
+      {
+        "expected": "3v+12 = 4v-8",
+        "mathml": "<mn>3</mn><mi>v</mi><mo>+</mo><mn>12</mn><mo>=</mo><mn>4</mn><mi>v</mi><mo>−</mo><mn>8</mn>",
+        "prompt": "Simplify the multiplication.",
+        "hint": "Calculate the multiplications on both sides of the equation."
+      },
+      {
+        "expected": "3v+12-3v = 4v-8-3v",
+        "mathml": "<mn>3</mn><mi>v</mi><mo>+</mo><mn>12</mn><mo>−</mo><mn>3</mn><mi>v</mi><mo>=</mo><mn>4</mn><mi>v</mi><mo>−</mo><mn>8</mn><mo>−</mo><mn>3</mn><mi>v</mi>",
+        "prompt": "Collect the variable terms.",
+        "hint": "Subtract 3v from both sides to move the variable terms together."
+      },
+      {
+        "expected": "12 = v-8",
+        "mathml": "<mn>12</mn><mo>=</mo><mi>v</mi><mo>−</mo><mn>8</mn>",
+        "prompt": "Simplify both sides.",
+        "hint": "Combine the variable terms on the right. What is 4v − 3v?"
+      },
+      {
+        "expected": "12+8 = v-8+8",
+        "mathml": "<mn>12</mn><mo>+</mo><mn>8</mn><mo>=</mo><mi>v</mi><mo>−</mo><mn>8</mn><mo>+</mo><mn>8</mn>",
+        "prompt": "Remove the constant term.",
+        "hint": "Add 8 to both sides to eliminate the negative 8 on the right."
+      },
+      {
+        "expected": "20 = v",
+        "mathml": "<mn>20</mn><mo>=</mo><mi>v</mi>",
+        "prompt": "Simplify your final equation.",
+        "hint": "Calculate 12 + 8 and -8 + 8. Congratulations, you've solved the equation!"
+      }
+    ]
+  },
+  "16": {
+    "title": "Question 16 - Fractions and brackets",
+    "original": "<mfrac><mi>x</mi><mn>3</mn></mfrac><mo>−</mo><mfrac><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>7</mn></mrow><mn>5</mn></mfrac><mo>=</mo><mfrac><mrow><mi>x</mi><mo>−</mo><mn>2</mn></mrow><mn>6</mn></mfrac>",
+    "given": "",
+    "steps": [
+      {
+        "expected": "10x/30 - 6(3x-7)/30 = 5(x-2)/30",
+        "mathml": "<mfrac><mrow><mn>10</mn><mi>x</mi></mrow><mn>30</mn></mfrac><mo>−</mo><mfrac><mrow><mn>6</mn><mo>(</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>7</mn><mo>)</mo></mrow><mn>30</mn></mfrac><mo>=</mo><mfrac><mrow><mn>5</mn><mo>(</mo><mi>x</mi><mo>−</mo><mn>2</mn><mo>)</mo></mrow><mn>30</mn></mfrac>",
+        "prompt": "Find a common denominator for all three fractions.",
+        "hint": "The denominators are 3, 5 and 6. Their lowest common denominator is 30."
+      },
+      {
+        "expected": "(10x/30)*30 - (6(3x-7)/30)*30 = (5(x-2)/30)*30",
+        "mathml": "<mfrac><mrow><mn>10</mn><mi>x</mi></mrow><mn>30</mn></mfrac><mo>×</mo><mn>30</mn><mo>−</mo><mfrac><mrow><mn>6</mn><mo>(</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>7</mn><mo>)</mo></mrow><mn>30</mn></mfrac><mo>×</mo><mn>30</mn><mo>=</mo><mfrac><mrow><mn>5</mn><mo>(</mo><mi>x</mi><mo>−</mo><mn>2</mn><mo>)</mo></mrow><mn>30</mn></mfrac><mo>×</mo><mn>30</mn>",
+        "prompt": "Eliminate the fractions.",
+        "hint": "Multiply each fraction by 30 to eliminate the denominators. Do not simplify at this stage. Remember to multiply the entire equation by 30."
+      },
+      {
+        "expected": "10x - 6(3x-7) = 5(x-2)",
+        "mathml": "<mn>10</mn><mi>x</mi><mo>−</mo><mn>6</mn><mo>(</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>7</mn><mo>)</mo><mo>=</mo><mn>5</mn><mo>(</mo><mi>x</mi><mo>−</mo><mn>2</mn><mo>)</mo>",
+        "prompt": "Simplify to eliminate the fractions?",
+        "hint": "Remove the denominators."
+      },
+      {
+        "expected": "10x - 18x + 42 = 5x - 10",
+        "mathml": "<mn>10</mn><mi>x</mi><mo>−</mo><mn>18</mn><mi>x</mi><mo>+</mo><mn>42</mn><mo>=</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>10</mn>",
+        "prompt": "Expand the brackets on both sides and calculate the multiplications.",
+        "hint": "Multiply -6 by both terms inside the first bracket, and 5 by both terms inside the second. Calculate the multiplications fully (for example, write 10 rather than 2*5). Pay particular attention to the negative signs."
+      },
+      {
+        "expected": "-8x + 42 = 5x - 10",
+        "mathml": "<mo>−</mo><mn>8</mn><mi>x</mi><mo>+</mo><mn>42</mn><mo>=</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>10</mn>",
+        "prompt": "Combine the like terms on the left.",
+        "hint": "Combine 10x and -18x."
+      },
+      {
+        "expected": "-8x+42-5x=5x-10-5x",
+        "mathml": "<mo>−</mo><mn>8</mn><mi>x</mi><mo>+</mo><mn>42</mn><mo>−</mo><mn>5</mn><mi>x</mi><mo>=</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>10</mn><mo>−</mo><mn>5</mn><mi>x</mi>",
+        "prompt": "Move the variable term to the left.",
+        "hint": "Subtract 5x from both sides of the equation. Remember to perform the same operation on both sides."
+      },
+      {
+        "expected": "-13x + 42 = -10",
+        "mathml": "<mo>−</mo><mn>13</mn><mi>x</mi><mo>+</mo><mn>42</mn><mo>=</mo><mo>−</mo><mn>10</mn>",
+        "prompt": "Move the variable terms to one side.",
+        "hint": "Subtract 5x from both sides."
+      },
+      {
+        "expected": "-13x + 42 - 42 = -10 - 42",
+        "mathml": "<mo>−</mo><mn>13</mn><mi>x</mi><mo>+</mo><mn>42</mn><mo>−</mo><mn>42</mn><mo>=</mo><mo>−</mo><mn>10</mn><mo>−</mo><mn>42</mn>",
+        "prompt": "Get the variable term on its own.",
+        "hint": "Subtract 42 from both sides of the equation to eliminate the positive 42 on the left."
+      },
+      {
+        "expected": "-13x = -52",
+        "mathml": "<mo>−</mo><mn>13</mn><mi>x</mi><mo>=</mo><mo>−</mo><mn>52</mn>",
+        "prompt": "Simplify.",
+        "hint": "Remove the 42's from the left and subract 42 from the right."
+      },
+      {
+        "expected": "-13x/-13 = -52/-13",
+        "mathml": "<mfrac><mrow><mo>−</mo><mn>13</mn><mi>x</mi></mrow><mrow><mo>−</mo><mn>13</mn></mrow></mfrac><mo>=</mo><mfrac><mrow><mo>−</mo><mn>52</mn></mrow><mrow><mo>−</mo><mn>13</mn></mrow></mfrac>",
+        "prompt": "Isolate x.",
+        "hint": "Divide both sides by -13, the coefficient of x. Remember to include the negative sign."
+      },
+      {
+        "expected": "x = 4",
+        "mathml": "<mi>x</mi><mo>=</mo><mn>4</mn>",
+        "prompt": "Simplify.",
+        "hint": "A negative divided by a negative gives a positive."
+      }
+    ]
+  },
+
+  "17": {
+    "title": "Question 17 - Kirchhoff's laws",
+    "original": "<mn>2</mn><msub><mi>i</mi><mn>1</mn></msub><mo>+</mo><mn>3</mn><msub><mi>i</mi><mn>2</mn></msub><mo>+</mo><msub><mi>i</mi><mn>3</mn></msub><mo>=</mo><mn>5</mn><mo>(</mo><msub><mi>i</mi><mn>2</mn></msub><mo>−</mo><msub><mi>i</mi><mn>1</mn></msub><mo>)</mo>",
+    "given": "Given: i2 = 7 A and i3 = 5 A",
+    "steps": [
+      {
+        "expected": "2i1 + 3(7) + 5 = 5(7-i1)",
+        "mathml": "<mn>2</mn><msub><mi>i</mi><mn>1</mn></msub><mo>+</mo><mn>3</mn><mo>(</mo><mn>7</mn><mo>)</mo><mo>+</mo><mn>5</mn><mo>=</mo><mn>5</mn><mo>(</mo><mn>7</mn><mo>−</mo><msub><mi>i</mi><mn>1</mn></msub><mo>)</mo>",
+        "prompt": "Substitute the known current values.",
+        "hint": "Replace i2 with 7 and i3 with 5. Leave i1 as the unknown."
+      },
+      {
+        "expected": "2i1 + 26 = 5(7-i1)",
+        "mathml": "<mn>2</mn><msub><mi>i</mi><mn>1</mn></msub><mo>+</mo><mn>26</mn><mo>=</mo><mn>5</mn><mo>(</mo><mn>7</mn><mo>−</mo><msub><mi>i</mi><mn>1</mn></msub><mo>)</mo>",
+        "prompt": "Simplify the constant terms on the left.",
+        "hint": "Calculate 3 multiplied by 7, then add 5."
+      },
+      {
+        "expected": "2i1 + 26 = 7*5 - i1*5",
+        "mathml": "<mn>2</mn><msub><mi>i</mi><mn>1</mn></msub><mo>+</mo><mn>26</mn><mo>=</mo><mn>7</mn><mo>×</mo><mn>5</mn><mo>−</mo><msub><mi>i</mi><mn>1</mn></msub><mo>×</mo><mn>5</mn>",
+        "prompt": "Expand the bracket on the right.",
+        "hint": "Multiply both terms inside the bracket by 5. Keep the multiplications visible."
+      },
+      {
+        "expected": "2i1 + 26 = 35 - 5i1",
+        "mathml": "<mn>2</mn><msub><mi>i</mi><mn>1</mn></msub><mo>+</mo><mn>26</mn><mo>=</mo><mn>35</mn><mo>−</mo><mn>5</mn><msub><mi>i</mi><mn>1</mn></msub>",
+        "prompt": "Now simplify the multiplications.",
+        "hint": "Calculate 7 multiplied by 5 and i1 multiplied by 5. Remember to keep the negative sign."
+      },
+      {
+        "expected": "2i1 + 26 + 5i1 = 35 - 5i1 + 5i1",
+        "mathml": "<mn>2</mn><msub><mi>i</mi><mn>1</mn></msub><mo>+</mo><mn>26</mn><mo>+</mo><mn>5</mn><msub><mi>i</mi><mn>1</mn></msub><mo>=</mo><mn>35</mn><mo>−</mo><mn>5</mn><msub><mi>i</mi><mn>1</mn></msub><mo>+</mo><mn>5</mn><msub><mi>i</mi><mn>1</mn></msub>",
+        "prompt": "Collect the variable terms on one side.",
+        "hint": "Add 5i1 to both sides of the equation to eliminate the negative 5i1 on the right."
+      },
+
+      {
+        "expected": "7i1 + 26 = 35",
+        "mathml": "<mn>7</mn><msub><mi>i</mi><mn>1</mn></msub><mo>+</mo><mn>26</mn><mo>=</mo><mn>35</mn>",
+        "prompt": "Simplify.",
+        "hint": "Remove the 5i1 values from the right and calculate the left."
+      },
+      {
+        "expected": "7i1 + 26 - 26 = 35 - 26",
+        "mathml": "<mn>7</mn><msub><mi>i</mi><mn>1</mn></msub><mo>+</mo><mn>26</mn><mo>−</mo><mn>26</mn><mo>=</mo><mn>35</mn><mo>−</mo><mn>26</mn>",
+        "prompt": "Get the variable term on its own.",
+        "hint": "Subtract 26 from both sides of the equation to eliminate the positive 26 on the left."
+      },
+
+      {
+        "expected": "7i1 = 9",
+        "mathml": "<mn>7</mn><msub><mi>i</mi><mn>1</mn></msub><mo>=</mo><mn>9</mn>",
+        "prompt": "Simplify both sides.",
+        "hint": "Remove all 26 values from the left and calculate the right."
+      },
+      {
+        "expected": "7i1/7 = 9/7",
+        "mathml": "<mfrac><mrow><mn>7</mn><msub><mi>i</mi><mn>1</mn></msub></mrow><mn>7</mn></mfrac><mo>=</mo><mfrac><mn>9</mn><mn>7</mn></mfrac>",
+        "prompt": "Show how you will isolate the variable.",
+        "hint": "Divide both sides of the equation by 7."
+      },
+      {
+        "expected": "i1 = 9/7",
+        "mathml": "<msub><mi>i</mi><mn>1</mn></msub><mo>=</mo><mfrac><mn>9</mn><mn>7</mn></mfrac>",
+        "prompt": "Simplify the left.",
+        "hint": "i1 should be on its own on the left, you can leave the right as a fraction."
+      }
+    ]
+  }
+}

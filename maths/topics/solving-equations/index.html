@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Step by Step - Algebra Tutor</title>
+<link rel="stylesheet" href="/styles/style.css">
+
+</head>
+
+<body>
+
+<header>
+  <h1>Step by Step</h1>
+  <p>Your interactive algebra tutor</p>
+</header>
+
+<main>
+
+  <div class="floating-tools">
+      <button id="timesButton" class="tool-button">
+          × Times tables
+      </button>
+
+      <button id="syntaxButton" class="tool-button">
+          ? Input guide
+      </button>
+  </div>
+
+<section class="panel">
+  <h2>Choose your question</h2>
+  <select id="questionSelect"></select>
+
+  <!-- <div class="tool-buttons">
+    <button class="secondary" id="timesButton">
+      ✖ Times Tables
+    </button>
+    <button class="secondary" id="syntaxButton">
+      ? Input Guide
+    </button>
+  </div> -->
+
+
+
+  <h3>Original question</h3>
+  <div class="equation original" id="original"></div>
+  <div class="given" id="given"></div>
+</section>
+
+<section class="panel">
+  <h2>Your progress</h2>
+
+  <div class="progress-text" id="progressText"></div>
+
+  <div class="progress-track">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
+
+  <h2>Current equation</h2>
+  <div class="equation" id="currentEquation"></div>
+
+  <div class="prompt">
+    <strong>Your next step</strong>
+    <div id="minorHint"></div>
+  </div>
+
+  <details>
+    <summary>Need a little more help? Show detailed hint</summary>
+    <p id="majorHint"></p>
+  </details>
+
+  <label for="answer">Enter your next equation:</label>
+
+  <input
+    id="answer"
+    type="text"
+    placeholder="e.g. -13x + 42 = -10"
+    autocomplete="off"
+    spellcheck="false"
+  >
+
+  <div class="actions">
+    <button id="submitButton">Check my answer</button>
+    <button class="secondary" id="clearButton">Clear</button>
+  </div>
+
+  <div id="feedback" class="feedback" aria-live="polite"></div>
+
+  <div id="success" class="success" hidden>
+    <h2>Excellent work!</h2>
+    <p>You've successfully completed this question.</p>
+  </div>
+</section>
+
+<section class="panel">
+  <h2>Completed steps</h2>
+  <div id="completed">Your completed steps will appear here.</div>
+</section>
+
+<div class="actions">
+  <button class="secondary" id="restartButton">Restart question</button>
+</div>
+
+</main>
+
+<footer>Step by Step - Interactive Algebra Tutor</footer>
+
+
+<!-- TIMES TABLES POP-UP -->
+
+<div class="modal" id="timesModal" role="dialog"
+     aria-modal="true" aria-labelledby="timesTitle">
+
+  <div class="modal-content">
+
+    <div class="modal-header">
+      <h2 id="timesTitle">Times Tables</h2>
+      <button class="close-button" data-close="timesModal">
+        ✕ Close
+      </button>
+    </div>
+
+    <p>
+      Use this grid to help find common multiples and
+      common denominators.
+    </p>
+
+    <label for="multiplesInput">
+      Highlight common multiples of these numbers:
+    </label>
+
+    <input id="multiplesInput" type="text"
+           placeholder="e.g. 3, 5, 6">
+
+    <p style="font-size:13px;color:#667487">
+      Separate numbers with commas. Green cells show
+      products divisible by all the numbers entered.
+    </p>
+
+    <div class="table-wrap">
+      <table id="timesTable"></table>
+    </div>
+
+    <p style="font-size:13px;color:#667487">
+      The grid shows multiplication tables from 1 to 12.
+      Common multiples beyond 144 will not appear.
+    </p>
+
+  </div>
+</div>
+
+
+<!-- INPUT GUIDE POP-UP -->
+
+<div class="modal" id="syntaxModal" role="dialog"
+     aria-modal="true" aria-labelledby="syntaxTitle">
+
+  <div class="modal-content">
+
+    <div class="modal-header">
+      <h2 id="syntaxTitle">Mathematical Input Guide</h2>
+      <button class="close-button" data-close="syntaxModal">
+        ✕ Close
+      </button>
+    </div>
+
+    <p>
+      You don't need special mathematical symbols.
+      Just use your ordinary keyboard.
+    </p>
+
+    <h3>Basic notation</h3>
+
+    <div class="help-example">
+      <math><mn>7</mn><mi>x</mi></math>
+      <br>Type: <code>7x</code> or <code>7*x</code>
+    </div>
+
+    <div class="help-example">
+      <math><mfrac><mi>x</mi><mn>3</mn></mfrac></math>
+      <br>Type: <code>x/3</code>
+    </div>
+
+    <div class="help-example">
+      <math>
+        <mfrac>
+          <mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>7</mn></mrow>
+          <mn>5</mn>
+        </mfrac>
+      </math>
+      <br>Type: <code>(3x-7)/5</code>
+    </div>
+
+    <div class="help-example">
+      <math>
+        <mn>5</mn><mo>(</mo><mi>x</mi>
+        <mo>−</mo><mn>2</mn><mo>)</mo>
+      </math>
+      <br>Type: <code>5(x-2)</code>
+    </div>
+
+    <div class="help-example">
+      <math><msub><mi>i</mi><mn>1</mn></msub></math>
+      <br>Type: <code>i1</code>
+    </div>
+
+    <div class="help-example">
+      <math>
+        <mo>−</mo><mn>13</mn><mi>x</mi>
+        <mo>+</mo><mn>42</mn>
+      </math>
+      <br>Type: <code>-13x+42</code>
+    </div>
+
+    <h3>Useful rules</h3>
+
+    <ul>
+      <li>Use <code>/</code> for fractions.</li>
+      <li>Use brackets around complete numerators and denominators.</li>
+      <li>Use <code>*</code> for multiplication if you prefer.</li>
+      <li>Use <code>-</code> for negative numbers.</li>
+      <li>Use <code>=</code> between the two sides.</li>
+      <li>Spaces don't matter.</li>
+    </ul>
+
+    <h3>Watch out for these mistakes</h3>
+
+    <div class="help-example">
+      Correct: <code>(3x-7)/5</code>
+      <br>Be careful: <code>3x-7/5</code>
+      <br>The brackets make a difference!
+    </div>
+
+    <div class="help-example">
+      Correct: <code>-13x=-52</code>
+      <br>Incorrect: <code>13x=-52</code>
+      <br>Check your negative signs!
+    </div>
+
+  </div>
+</div>
+
+<script type="module" src="scripts/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,360 @@
+
+{
+  "1": {
+    "title": "Question 1 - The gas equation",
+    "original": "<mi>p</mi><mi>V</mi><mo>=</mo><mi>n</mi><mi>R</mi><mi>T</mi>",
+    "given": "The characteristic gas equation connects pressure, volume and temperature. Make T the subject of the formula.",
+    "steps": [
+      {
+        "expected": "p*V/n = n*R*T/n",
+        "mathml": "<mfrac><mrow><mi>p</mi><mi>V</mi></mrow><mi>n</mi></mfrac><mo>=</mo><mfrac><mrow><mi>n</mi><mi>R</mi><mi>T</mi></mrow><mi>n</mi></mfrac>",
+        "prompt": "Consider the factors multiplying the subject.",
+        "hint": "The subject T is multiplied by both n and R. First, deal with the factor n by dividing both sides of the equation by n."
+      },
+      {
+        "expected": "p*V/n = R*T",
+        "mathml": "<mfrac><mrow><mi>p</mi><mi>V</mi></mrow><mi>n</mi></mfrac><mo>=</mo><mi>R</mi><mi>T</mi>",
+        "prompt": "Simplify.",
+        "hint": "Simplify the right-hand side. Dividing nRT by n leaves RT."
+      },
+      {
+        "expected": "(p*V/n)/R = (R*T)/R",
+        "mathml": "<mfrac><mrow><mfrac><mrow><mi>p</mi><mi>V</mi></mrow><mi>n</mi></mfrac></mrow><mi>R</mi></mfrac><mo>=</mo><mfrac><mrow><mi>R</mi><mi>T</mi></mrow><mi>R</mi></mfrac>",
+        "prompt": "One more factor needs attention.",
+        "hint": "R is still multiplying T. Divide both sides by R to remove this factor."
+      },
+      {
+        "expected": "p*V/n/R = T",
+        "mathml": "<mfrac><mrow><mi>p</mi><mi>V</mi></mrow><mrow><mi>n</mi><mi>R</mi></mrow></mfrac><mo>=</mo><mi>T</mi>",
+        "prompt": "Look carefully at the simplified equation.",
+        "hint": "Simplify RT divided by R. You should now have T on its own. The expression on the left can be written as pV/nR."
+      },
+      {
+        "expected": "T = p*V/(n*R)",
+        "mathml": "<mi>T</mi><mo>=</mo><mfrac><mrow><mi>p</mi><mi>V</mi></mrow><mrow><mi>n</mi><mi>R</mi></mrow></mfrac>",
+        "prompt": "Check that the subject is in the correct position.",
+        "hint": "The subject is conventionally written on the left-hand side. Swap the two sides of the equation to give your final answer."
+      }
+    ]
+  },
+
+  "2": {
+    "title": "Question 2 - Similar cones",
+    "original": "<mfrac><mi>R</mi><mi>r</mi></mfrac><mo>=</mo><mfrac><mi>H</mi><mi>h</mi></mfrac>",
+    "given": "A large cone has radius R and height H. A smaller cone has radius r and height h. Their dimensions are related by this equation. Make h the subject.",
+    "steps": [
+      {
+        "expected": "R/r*h = H/h*h",
+        "mathml": "<mfrac><mi>R</mi><mi>r</mi></mfrac><mi>h</mi><mo>=</mo><mfrac><mi>H</mi><mi>h</mi></mfrac><mi>h</mi>",
+        "prompt": "Look at the denominator on the right.",
+        "hint": "h is currently in the denominator. Multiply both sides of the equation by h to remove it from the denominator."
+      },
+      {
+        "expected": "R/r*h = H",
+        "mathml": "<mfrac><mi>R</mi><mi>r</mi></mfrac><mi>h</mi><mo>=</mo><mi>H</mi>",
+        "prompt": "Consider simplifying the right-hand side.",
+        "hint": "Multiplying H/h by h cancels the h terms, leaving H."
+      },
+      {
+        "expected": "(R/r*h)/(R/r) = H/(R/r)",
+        "mathml": "<mfrac><mrow><mfrac><mi>R</mi><mi>r</mi></mfrac><mi>h</mi></mrow><mfrac><mi>R</mi><mi>r</mi></mfrac></mfrac><mo>=</mo><mfrac><mi>H</mi><mfrac><mi>R</mi><mi>r</mi></mfrac></mfrac>",
+        "prompt": "There is still a coefficient attached to h.",
+        "hint": "R/r is multiplying h. Divide both sides by R/r to leave h on its own."
+      },
+      {
+        "expected": "h = H/(R/r)",
+        "mathml": "<mi>h</mi><mo>=</mo><mfrac><mi>H</mi><mfrac><mi>R</mi><mi>r</mi></mfrac></mfrac>",
+        "prompt": "Look at the structure of your fraction.",
+        "hint": "Simplify the left-hand side. Dividing (R/r)h by R/r leaves h."
+      },
+      {
+        "expected": "h = H*r/R",
+        "mathml": "<mi>h</mi><mo>=</mo><mfrac><mrow><mi>H</mi><mi>r</mi></mrow><mi>R</mi></mfrac>",
+        "prompt": "Can the complex fraction be simplified?",
+        "hint": "Dividing by a fraction is equivalent to multiplying by its reciprocal. Therefore H divided by R/r becomes H multiplied by r/R."
+      }
+    ]
+  },
+
+  "3": {
+    "title": "Question 3 - Equations of motion",
+    "original": "<mi>v</mi><mo>=</mo><mi>u</mi><mo>+</mo><mi>a</mi><mi>t</mi>",
+    "given": "The equation v = u + at describes motion with constant acceleration. Here, u is the initial velocity and v is the final velocity. Make u the subject.",
+    "steps": [
+      {
+        "expected": "v-a*t = u+a*t-a*t",
+        "mathml": "<mi>v</mi><mo>−</mo><mi>a</mi><mi>t</mi><mo>=</mo><mi>u</mi><mo>+</mo><mi>a</mi><mi>t</mi><mo>−</mo><mi>a</mi><mi>t</mi>",
+        "prompt": "Look at the terms on the right-hand side.",
+        "hint": "The subject u has an additional term, at, alongside it. Subtract at from both sides of the equation."
+      },
+      {
+        "expected": "v-a*t = u",
+        "mathml": "<mi>v</mi><mo>−</mo><mi>a</mi><mi>t</mi><mo>=</mo><mi>u</mi>",
+        "prompt": "What happens to the additional terms?",
+        "hint": "Simplify both sides. On the right, at - at cancels out, leaving u."
+      },
+      {
+        "expected": "u = v-a*t",
+        "mathml": "<mi>u</mi><mo>=</mo><mi>v</mi><mo>−</mo><mi>a</mi><mi>t</mi>",
+        "prompt": "Check the position of your subject.",
+        "hint": "The subject is conventionally written on the left-hand side. Swap the sides to give your final answer."
+      }
+    ]
+  },
+  "4": {
+    "title": "Question 4 - Equations of motion (time)",
+    "original": "<mi>v</mi><mo>=</mo><mi>u</mi><mo>+</mo><mi>a</mi><mi>t</mi>",
+    "given": "The equation v = u + at describes motion with constant acceleration. Make t the subject.",
+    "steps": [
+      {
+        "expected": "v-u = u+a*t-u",
+        "mathml": "<mi>v</mi><mo>−</mo><mi>u</mi><mo>=</mo><mi>u</mi><mo>+</mo><mi>a</mi><mi>t</mi><mo>−</mo><mi>u</mi>",
+        "prompt": "Consider the terms on the right-hand side.",
+        "hint": "You need to separate the term containing t from the other terms. Subtract u from both sides."
+      },
+      {
+        "expected": "v-u = a*t",
+        "mathml": "<mi>v</mi><mo>−</mo><mi>u</mi><mo>=</mo><mi>a</mi><mi>t</mi>",
+        "prompt": "What remains after simplifying?",
+        "hint": "The u terms cancel on the right-hand side, leaving at."
+      },
+      {
+        "expected": "(v-u)/a = (a*t)/a",
+        "mathml": "<mfrac><mrow><mi>v</mi><mo>−</mo><mi>u</mi></mrow><mi>a</mi></mfrac><mo>=</mo><mfrac><mrow><mi>a</mi><mi>t</mi></mrow><mi>a</mi></mfrac>",
+        "prompt": "Look at the coefficient of t.",
+        "hint": "a is multiplying t. Divide both sides by a to isolate t."
+      },
+      {
+        "expected": "(v-u)/a = t",
+        "mathml": "<mfrac><mrow><mi>v</mi><mo>−</mo><mi>u</mi></mrow><mi>a</mi></mfrac><mo>=</mo><mi>t</mi>",
+        "prompt": "Simplify the right-hand side.",
+        "hint": "Dividing at by a leaves t."
+      },
+      {
+        "expected": "t = (v-u)/a",
+        "mathml": "<mi>t</mi><mo>=</mo><mfrac><mrow><mi>v</mi><mo>−</mo><mi>u</mi></mrow><mi>a</mi></mfrac>",
+        "prompt": "Check where the subject appears.",
+        "hint": "Swap the two sides so that t is written on the left."
+      }
+    ]
+  },
+
+  "5": {
+    "title": "Question 5 - Temperature conversion",
+    "original": "<mi>F</mi><mo>=</mo><mfrac><mn>9</mn><mn>5</mn></mfrac><mi>C</mi><mo>+</mo><mn>32</mn>",
+    "given": "Temperatures in Fahrenheit (F) and Celsius (C) are related by this formula. Make C the subject.",
+    "steps": [
+      {
+        "expected": "F-32 = (9/5)*C+32-32",
+        "mathml": "<mi>F</mi><mo>−</mo><mn>32</mn><mo>=</mo><mfrac><mn>9</mn><mn>5</mn></mfrac><mi>C</mi><mo>+</mo><mn>32</mn><mo>−</mo><mn>32</mn>",
+        "prompt": "Consider the constant on the right-hand side.",
+        "hint": "You need to remove the added 32. Subtract 32 from both sides of the equation."
+      },
+      {
+        "expected": "F-32 = (9/5)*C",
+        "mathml": "<mi>F</mi><mo>−</mo><mn>32</mn><mo>=</mo><mfrac><mn>9</mn><mn>5</mn></mfrac><mi>C</mi>",
+        "prompt": "Simplify the equation.",
+        "hint": "The 32 and -32 cancel on the right-hand side."
+      },
+      {
+        "expected": "(F-32)/(9/5) = ((9/5)*C)/(9/5)",
+        "mathml": "<mfrac><mrow><mi>F</mi><mo>−</mo><mn>32</mn></mrow><mfrac><mn>9</mn><mn>5</mn></mfrac></mfrac><mo>=</mo><mfrac><mrow><mfrac><mn>9</mn><mn>5</mn></mfrac><mi>C</mi></mrow><mfrac><mn>9</mn><mn>5</mn></mfrac></mfrac>",
+        "prompt": "Look at the coefficient multiplying C.",
+        "hint": "C is multiplied by 9/5. Divide both sides by 9/5 to leave C on its own."
+      },
+      {
+        "expected": "(F-32)/(9/5) = C",
+        "mathml": "<mfrac><mrow><mi>F</mi><mo>−</mo><mn>32</mn></mrow><mfrac><mn>9</mn><mn>5</mn></mfrac></mfrac><mo>=</mo><mi>C</mi>",
+        "prompt": "Simplify the right-hand side.",
+        "hint": "Dividing (9/5)C by 9/5 leaves just C."
+      },
+      {
+        "expected": "C = (F-32)*5/9",
+        "mathml": "<mi>C</mi><mo>=</mo><mfrac><mrow><mo>(</mo><mi>F</mi><mo>−</mo><mn>32</mn><mo>)</mo><mo>×</mo><mn>5</mn></mrow><mn>9</mn></mfrac>",
+        "prompt": "Can you simplify the complex fraction?",
+        "hint": "Dividing by 9/5 is equivalent to multiplying by its reciprocal, 5/9. Then write C on the left."
+      }
+    ]
+  },
+
+  "6": {
+    "title": "Question 6 - Straight line equations",
+    "original": "<mi>y</mi><mo>=</mo><mi>m</mi><mi>x</mi><mo>+</mo><mi>c</mi>",
+    "given": "The equation y = mx + c describes a straight line, where m is the gradient and c is the vertical intercept. Make x the subject.",
+    "steps": [
+      {
+        "expected": "y-c = m*x+c-c",
+        "mathml": "<mi>y</mi><mo>−</mo><mi>c</mi><mo>=</mo><mi>m</mi><mi>x</mi><mo>+</mo><mi>c</mi><mo>−</mo><mi>c</mi>",
+        "prompt": "Consider the additional term on the right.",
+        "hint": "The term c needs to be removed from the right-hand side. Subtract c from both sides."
+      },
+      {
+        "expected": "y-c = m*x",
+        "mathml": "<mi>y</mi><mo>−</mo><mi>c</mi><mo>=</mo><mi>m</mi><mi>x</mi>",
+        "prompt": "Simplify your equation.",
+        "hint": "The c terms cancel on the right-hand side, leaving mx."
+      },
+      {
+        "expected": "(y-c)/m = (m*x)/m",
+        "mathml": "<mfrac><mrow><mi>y</mi><mo>−</mo><mi>c</mi></mrow><mi>m</mi></mfrac><mo>=</mo><mfrac><mrow><mi>m</mi><mi>x</mi></mrow><mi>m</mi></mfrac>",
+        "prompt": "Look at the coefficient of x.",
+        "hint": "m is multiplying x. Divide both sides by m to isolate x."
+      },
+      {
+        "expected": "(y-c)/m = x",
+        "mathml": "<mfrac><mrow><mi>y</mi><mo>−</mo><mi>c</mi></mrow><mi>m</mi></mfrac><mo>=</mo><mi>x</mi>",
+        "prompt": "Simplify the right-hand side.",
+        "hint": "Dividing mx by m leaves x."
+      },
+      {
+        "expected": "x = (y-c)/m",
+        "mathml": "<mi>x</mi><mo>=</mo><mfrac><mrow><mi>y</mi><mo>−</mo><mi>c</mi></mrow><mi>m</mi></mfrac>",
+        "prompt": "Check the position of your subject.",
+        "hint": "Swap the two sides to write x on the left-hand side."
+      }
+    ]
+  },
+  "7": {
+    "title": "Question 7 - Geometric progressions",
+    "original": "<mi>S</mi><mo>=</mo><mfrac><mi>a</mi><mrow><mn>1</mn><mo>−</mo><mi>r</mi></mrow></mfrac>",
+    "given": "The sum to infinity, S, of a geometric progression is given by this formula, where a is the first term and r is the common ratio. Assume r is less than 1. Make r the subject.",
+    "steps": [
+      {
+        "expected": "S*(1-r) = (a/(1-r))*(1-r)",
+        "mathml": "<mi>S</mi><mo>(</mo><mn>1</mn><mo>−</mo><mi>r</mi><mo>)</mo><mo>=</mo><mfrac><mi>a</mi><mrow><mn>1</mn><mo>−</mo><mi>r</mi></mrow></mfrac><mo>(</mo><mn>1</mn><mo>−</mo><mi>r</mi><mo>)</mo>",
+        "prompt": "Consider the denominator on the right.",
+        "hint": "The expression 1 - r is in the denominator. Multiply both sides by (1 - r) to remove the fraction."
+      },
+      {
+        "expected": "S*(1-r) = a",
+        "mathml": "<mi>S</mi><mo>(</mo><mn>1</mn><mo>−</mo><mi>r</mi><mo>)</mo><mo>=</mo><mi>a</mi>",
+        "prompt": "Simplify the right-hand side.",
+        "hint": "The factors (1 - r) cancel on the right, leaving a."
+      },
+      {
+        "expected": "S*(1-r)/S = a/S",
+        "mathml": "<mfrac><mrow><mi>S</mi><mo>(</mo><mn>1</mn><mo>−</mo><mi>r</mi><mo>)</mo></mrow><mi>S</mi></mfrac><mo>=</mo><mfrac><mi>a</mi><mi>S</mi></mfrac>",
+        "prompt": "Look at the factor multiplying the bracket.",
+        "hint": "S is multiplying the bracket containing r. Divide both sides by S."
+      },
+      {
+        "expected": "1-r = a/S",
+        "mathml": "<mn>1</mn><mo>−</mo><mi>r</mi><mo>=</mo><mfrac><mi>a</mi><mi>S</mi></mfrac>",
+        "prompt": "Simplify the left-hand side.",
+        "hint": "Dividing S(1 - r) by S leaves 1 - r."
+      },
+      {
+        "expected": "1-r-1 = a/S-1",
+        "mathml": "<mn>1</mn><mo>−</mo><mi>r</mi><mo>−</mo><mn>1</mn><mo>=</mo><mfrac><mi>a</mi><mi>S</mi></mfrac><mo>−</mo><mn>1</mn>",
+        "prompt": "Consider the constant on the left.",
+        "hint": "Subtract 1 from both sides to remove the positive constant on the left."
+      },
+      {
+        "expected": "-r = a/S-1",
+        "mathml": "<mo>−</mo><mi>r</mi><mo>=</mo><mfrac><mi>a</mi><mi>S</mi></mfrac><mo>−</mo><mn>1</mn>",
+        "prompt": "Simplify the left-hand side.",
+        "hint": "The 1 and -1 cancel, leaving -r."
+      },
+      {
+        "expected": "-r*-1 = (a/S-1)*-1",
+        "mathml": "<mo>−</mo><mi>r</mi><mo>×</mo><mo>−</mo><mn>1</mn><mo>=</mo><mo>(</mo><mfrac><mi>a</mi><mi>S</mi></mfrac><mo>−</mo><mn>1</mn><mo>)</mo><mo>×</mo><mo>−</mo><mn>1</mn>",
+        "prompt": "Think about the negative sign.",
+        "hint": "r currently has a negative coefficient. Multiply both sides by -1 to make its coefficient positive."
+      },
+      {
+        "expected": "r = 1-a/S",
+        "mathml": "<mi>r</mi><mo>=</mo><mn>1</mn><mo>−</mo><mfrac><mi>a</mi><mi>S</mi></mfrac>",
+        "prompt": "Simplify and check your subject.",
+        "hint": "Multiplying the right-hand side by -1 changes the signs: a/S - 1 becomes 1 - a/S. You now have r as the subject."
+      }
+    ]
+  },
+
+  "8": {
+    "title": "Question 8 - Electrical resistance",
+    "original": "<mi>I</mi><mo>=</mo><mfrac><mi>V</mi><mrow><mi>R</mi><mo>+</mo><mi>r</mi></mrow></mfrac>",
+    "given": "The current I and voltage V in a circuit containing two resistances R and r in series are related by this formula. Make R the subject.",
+    "steps": [
+      {
+        "expected": "I*(R+r) = (V/(R+r))*(R+r)",
+        "mathml": "<mi>I</mi><mo>(</mo><mi>R</mi><mo>+</mo><mi>r</mi><mo>)</mo><mo>=</mo><mfrac><mi>V</mi><mrow><mi>R</mi><mo>+</mo><mi>r</mi></mrow></mfrac><mo>(</mo><mi>R</mi><mo>+</mo><mi>r</mi><mo>)</mo>",
+        "prompt": "Consider the denominator on the right.",
+        "hint": "The expression R + r is in the denominator. Multiply both sides by (R + r) to remove the fraction."
+      },
+      {
+        "expected": "I*(R+r) = V",
+        "mathml": "<mi>I</mi><mo>(</mo><mi>R</mi><mo>+</mo><mi>r</mi><mo>)</mo><mo>=</mo><mi>V</mi>",
+        "prompt": "Simplify the right-hand side.",
+        "hint": "The factors R + r cancel on the right, leaving V."
+      },
+      {
+        "expected": "I*(R+r)/I = V/I",
+        "mathml": "<mfrac><mrow><mi>I</mi><mo>(</mo><mi>R</mi><mo>+</mo><mi>r</mi><mo>)</mo></mrow><mi>I</mi></mfrac><mo>=</mo><mfrac><mi>V</mi><mi>I</mi></mfrac>",
+        "prompt": "Look at the coefficient multiplying the bracket.",
+        "hint": "I is multiplying the bracket. Divide both sides by I to remove this coefficient."
+      },
+      {
+        "expected": "R+r = V/I",
+        "mathml": "<mi>R</mi><mo>+</mo><mi>r</mi><mo>=</mo><mfrac><mi>V</mi><mi>I</mi></mfrac>",
+        "prompt": "Simplify the left-hand side.",
+        "hint": "Dividing I(R + r) by I leaves R + r."
+      },
+      {
+        "expected": "R+r-r = V/I-r",
+        "mathml": "<mi>R</mi><mo>+</mo><mi>r</mi><mo>−</mo><mi>r</mi><mo>=</mo><mfrac><mi>V</mi><mi>I</mi></mfrac><mo>−</mo><mi>r</mi>",
+        "prompt": "Consider the additional term on the left.",
+        "hint": "Subtract r from both sides to remove the additional resistance from the left-hand side."
+      },
+      {
+        "expected": "R = V/I-r",
+        "mathml": "<mi>R</mi><mo>=</mo><mfrac><mi>V</mi><mi>I</mi></mfrac><mo>−</mo><mi>r</mi>",
+        "prompt": "Simplify your final equation.",
+        "hint": "The r terms cancel on the left, leaving R as the subject."
+      }
+    ]
+  },
+
+  "9": {
+    "title": "Question 9 - Surface area of a cone",
+    "original": "<mi>S</mi><mo>=</mo><mi>π</mi><mi>r</mi><mo>(</mo><mi>r</mi><mo>+</mo><mi>h</mi><mo>)</mo>",
+    "given": "The surface area S of a cone with height h and base radius r is given by this formula. Make h the subject. Leave your answer in terms of π, r and S.",
+    "steps": [
+      {
+        "expected": "S/π = (π*r*(r+h))/π",
+        "mathml": "<mfrac><mi>S</mi><mi>π</mi></mfrac><mo>=</mo><mfrac><mrow><mi>π</mi><mi>r</mi><mo>(</mo><mi>r</mi><mo>+</mo><mi>h</mi><mo>)</mo></mrow><mi>π</mi></mfrac>",
+        "prompt": "Consider the coefficient outside the bracket.",
+        "hint": "π is multiplying the expression on the right. Divide both sides by π to remove this factor."
+      },
+      {
+        "expected": "S/π = r*(r+h)",
+        "mathml": "<mfrac><mi>S</mi><mi>π</mi></mfrac><mo>=</mo><mi>r</mi><mo>(</mo><mi>r</mi><mo>+</mo><mi>h</mi><mo>)</mo>",
+        "prompt": "Simplify the right-hand side.",
+        "hint": "The π terms cancel, leaving r(r + h)."
+      },
+      {
+        "expected": "(S/π)/r = (r*(r+h))/r",
+        "mathml": "<mfrac><mrow><mfrac><mi>S</mi><mi>π</mi></mfrac></mrow><mi>r</mi></mfrac><mo>=</mo><mfrac><mrow><mi>r</mi><mo>(</mo><mi>r</mi><mo>+</mo><mi>h</mi><mo>)</mo></mrow><mi>r</mi></mfrac>",
+        "prompt": "Look at the factor outside the bracket.",
+        "hint": "r is multiplying the bracket. Divide both sides by r to leave the bracket on its own."
+      },
+      {
+        "expected": "S/π/r = r+h",
+        "mathml": "<mfrac><mi>S</mi><mrow><mi>π</mi><mi>r</mi></mrow></mfrac><mo>=</mo><mi>r</mi><mo>+</mo><mi>h</mi>",
+        "prompt": "Simplify the right-hand side.",
+        "hint": "Dividing r(r + h) by r leaves r + h. The expression on the left can be written in multiple mathematically equivalent ways, including S/(πr). However, this application requires S/π/r for now."
+      },
+      {
+        "expected": "S/π/r-r = r+h-r",
+        "mathml": "<mfrac><mi>S</mi><mrow><mi>π</mi><mi>r</mi></mrow></mfrac><mo>−</mo><mi>r</mi><mo>=</mo><mi>r</mi><mo>+</mo><mi>h</mi><mo>−</mo><mi>r</mi>",
+        "prompt": "Consider the remaining term alongside h.",
+        "hint": "Subtract r from both sides to remove the additional r on the right-hand side."
+      },
+      {
+        "expected": "S/π/r-r = h",
+        "mathml": "<mfrac><mi>S</mi><mrow><mi>π</mi><mi>r</mi></mrow></mfrac><mo>−</mo><mi>r</mi><mo>=</mo><mi>h</mi>",
+        "prompt": "Simplify and check your subject.",
+        "hint": "The r terms cancel on the right, leaving h. You have successfully made h the subject."
+      }
+    ]
+  }
+}
