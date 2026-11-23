@@ -299,6 +299,7 @@ function checkAnswer() {
 
     // Update the screen.
     render();
+    $("answer").value = studentAnswer;  // hacky way of keeping answer in text box
 
     if (currentStep === lesson.steps.length) {
 
