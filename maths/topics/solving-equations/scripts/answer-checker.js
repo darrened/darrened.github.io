@@ -2,6 +2,111 @@
 "use strict";
 
 // ==========================================
+// NORMALISE FRACTION MULTIPLICATION
+// ==========================================
+
+function normaliseFractionMultiplication(expression) {
+
+  // Convert (20/35)y into 20y/35.
+  expression = expression.replace(
+    /\((\d+)\/(\d+)\)([a-z]\w*)/gi,
+    "$1$3/$2"
+  );
+
+  // Convert 20/35*y into 20y/35.
+  expression = expression.replace(
+    /(\d+)\/(\d+)\*([a-z]\w*)/gi,
+    "$1$3/$2"
+  );
+
+  // Convert (2/3)*t into 2t/3.
+  expression = expression.replace(
+    /\((\d+)\/(\d+)\)\*([a-z]\w*)/gi,
+    "$1$3/$2"
+  );
+
+  return expression;
+}
+
+// ==========================================
+// EXPAND BRACKETED MULTIPLICATION
+// ==========================================
+
+function expandBracketedIntegerMultiplication(expression) {
+
+  return expression.replace(
+    /\(([^()]*)\)\*(\d+)/g,
+    (match, contents, multiplier) => {
+
+      const terms = [];
+
+      let current = "";
+
+      for (let i = 0; i < contents.length; i++) {
+
+        const char = contents[i];
+        const previous = contents[i - 1];
+
+        const isOperator =
+          char === "+" || char === "-";
+
+        const isUnarySign =
+          i === 0 ||
+          ["+", "-", "*", "/"].includes(previous);
+
+        if (
+          isOperator &&
+          current !== "" &&
+          !isUnarySign
+        ) {
+
+          terms.push(current);
+          current = char;
+
+        } else {
+
+          current += char;
+        }
+      }
+
+      if (current) {
+        terms.push(current);
+      }
+
+      // Only expand brackets containing multiple terms.
+      if (terms.length < 2) {
+        return match;
+      }
+
+      return terms
+        .map(term => `${term}*${multiplier}`)
+        .join("");
+    }
+  );
+}
+
+
+function normaliseImplicitMultiplication(expression) {
+
+  // Convert 12x into 12*x.
+  expression = expression.replace(
+    /(\d)([a-z])/gi,
+    "$1*$2"
+  );
+
+  // Convert 3(x+1) into 3*(x+1).
+  // Also handles variables and closing brackets before brackets.
+  expression = expression.replace(
+    /([a-z0-9)])\(/gi,
+    "$1*("
+  );
+
+  return expression;
+}
+
+
+
+// ==========================================
 // ANSWER NORMALISATION
 // ==========================================
 
@@ -17,6 +122,13 @@ export function normaliseEquation(input) {
 
   // Remove spaces.
   value = value.replace(/\s+/g, "");
+
+  // Standardise implicit multiplication.
+  value = normaliseImplicitMultiplication(value);
+  // Normalise multiplication of fractions by variables.
+  value = normaliseFractionMultiplication(value);
+  // Expand multiplication of bracketed expressions.
+  value = expandBracketedIntegerMultiplication(value);
 
   const sides = value.split("=");
 
@@ -55,7 +167,7 @@ export function normaliseEquation(input) {
 
   // Remove optional multiplication symbols.
   value = value.replace(
-    /(\d)\*(?=[a-z(])/g,
+    /(\d)\*(?=[a-z])/g,
     "$1"
   );
 
@@ -170,17 +282,86 @@ function removeRedundantMultiplicationBrackets(expression) {
   do {
     previous = expression;
 
-    // (t) -> t when used as a multiplication factor
-    expression = expression.replace(
-      /\*\(([a-z]\d*)\)/g,
-      "*$1"
-    );
+    for (let i = 0; i < expression.length; i++) {
 
-    // (4/t)*t -> 4/t*t
-    expression = expression.replace(
-      /\(([^()]*)\)\*/g,
-      "$1*"
-    );
+      if (expression[i] !== "(") continue;
+
+      // Find the matching closing bracket.
+      let depth = 1;
+      let j = i + 1;
+
+      for (; j < expression.length; j++) {
+
+        if (expression[j] === "(") depth++;
+        if (expression[j] === ")") depth--;
+
+        if (depth === 0) break;
+      }
+
+      if (depth !== 0) continue;
+
+      const contents = expression.slice(i + 1, j);
+
+      // Only consider brackets used as multiplication factors.
+      const before = expression[i - 1];
+      const after = expression[j + 1];
+
+      if (before !== "*" && after !== "*") continue;
+
+      // Check for top-level addition or subtraction.
+      let innerDepth = 0;
+      let hasAdditionOrSubtraction = false;
+
+      for (let k = 0; k < contents.length; k++) {
+
+        const char = contents[k];
+        const previousChar = contents[k - 1];
+
+        if (char === "(") innerDepth++;
+        if (char === ")") innerDepth--;
+
+        const isOperator =
+          char === "+" || char === "-";
+
+        const isUnarySign =
+          k === 0 ||
+          ["+", "-", "*", "/", "("].includes(previousChar);
+
+        if (
+          innerDepth === 0 &&
+          isOperator &&
+          !isUnarySign
+        ) {
+          hasAdditionOrSubtraction = true;
+          break;
+        }
+      }
+
+      // Brackets around addition or subtraction must remain.
+      // However, the multiplication symbol immediately before
+      // those brackets is optional.
+      if (hasAdditionOrSubtraction) {
+
+        if (before === "*") {
+
+          expression =
+            expression.slice(0, i - 1) +
+            expression.slice(i);
+
+          break;
+        }
+
+        continue;
+      }
+
+      // Remove the redundant brackets.
+      expression =
+        expression.slice(0, i) +
+        contents +
+        expression.slice(j + 1);
+
+      break;
+    }
 
   } while (expression !== previous);
 

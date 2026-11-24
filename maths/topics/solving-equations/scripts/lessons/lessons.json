@@ -179,7 +179,7 @@
       {
         "expected": "-5x/-5=29/-5",
         "mathml": "<mfrac><mrow><mo>−</mo><mn>5</mn><mi>x</mi></mrow><mrow><mo>−</mo><mn>5</mn></mrow></mfrac><mo>=</mo><mfrac><mn>29</mn><mrow><mo>−</mo><mn>5</mn></mrow></mfrac>",
-        "prompt": "Divide both sides by -5 to isolate x.",
+        "prompt": "Isolate x.",
         "hint": "Divide the entire left-hand side and right-hand side by -5. Remember that a negative divided by a negative is positive."
       },
       {
@@ -277,7 +277,7 @@
       {
         "expected": "8x/8 = 45/8",
         "mathml": "<mfrac><mrow><mn>8</mn><mi>x</mi></mrow><mn>8</mn></mfrac><mo>=</mo><mfrac><mn>45</mn><mn>8</mn></mfrac>",
-        "prompt": "Isolate x by dividing both sides by 8.",
+        "prompt": "Isolate x.",
         "hint": "Divide both sides by 8. You can leave the answer as a fraction."
       },
       {
@@ -326,7 +326,7 @@
       {
         "expected": "-2x/-2 = 30/-2",
         "mathml": "<mfrac><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mrow><mo>−</mo><mn>2</mn></mrow></mfrac><mo>=</mo><mfrac><mn>30</mn><mrow><mo>−</mo><mn>2</mn></mrow></mfrac>",
-        "prompt": "Isolate x by dividing both sides by -2.",
+        "prompt": "Isolate x.",
         "hint": "Divide both sides by -2. Pay attention to the signs."
       },
       {
@@ -346,7 +346,7 @@
         "expected": "3m + 9/12 = 2 + 8m/12",
         "mathml": "<mn>3</mn><mi>m</mi><mo>+</mo><mfrac><mn>9</mn><mn>12</mn></mfrac><mo>=</mo><mn>2</mn><mo>+</mo><mfrac><mrow><mn>8</mn><mi>m</mi></mrow><mn>12</mn></mfrac>",
         "prompt": "Find a common denominator for the fractions.",
-        "hint": "The denominators are 4 and 3. Their lowest common denominator is 12. What must you multiply the numerator and denominator of the fractions by?"
+        "hint": "The denominators are 4 and 3. Their lowest common denominator is 12. Convert each fraction to an equivalent fraction with a denominator of 12, calculating the new numerators."
       },
       {
         "expected": "3m*12 + 9/12*12 = 2*12 + 8m/12*12",
@@ -387,7 +387,7 @@
       {
         "expected": "28m/28 = 15/28",
         "mathml": "<mfrac><mrow><mn>28</mn><mi>m</mi></mrow><mn>28</mn></mfrac><mo>=</mo><mfrac><mn>15</mn><mn>28</mn></mfrac>",
-        "prompt": "Isolate m by dividing both sides by 28.",
+        "prompt": "Isolate m.",
         "hint": "Divide the entire left-hand side and right-hand side by 28."
       },
       {
@@ -430,13 +430,13 @@
       {
         "expected": "12/2 = 2t/2",
         "mathml": "<mfrac><mn>12</mn><mn>2</mn></mfrac><mo>=</mo><mfrac><mrow><mn>2</mn><mi>t</mi></mrow><mn>2</mn></mfrac>",
-        "prompt": "Isolate t by dividing both sides by 2.",
+        "prompt": "Isolate t.",
         "hint": "Divide the entire left-hand side and right-hand side by 2."
       },
       {
         "expected": "t = 6",
         "mathml": "<mi>t</mi><mo>=</mo><mn>6</mn>",
-        "prompt": "Simplify your final equation.",
+        "prompt": "Simplify your final equation and reverse the equation so t is on the left.",
         "hint": "Calculate 12 divided by 2. On the right, 2t divided by 2 leaves just t."
       }
     ]
@@ -450,7 +450,7 @@
         "expected": "((4*5)/35)y - ((3*7)/35)y = 2",
         "mathml": "<mfrac><mrow><mn>4</mn><mo>×</mo><mn>5</mn></mrow><mn>35</mn></mfrac><mi>y</mi><mo>−</mo><mfrac><mrow><mn>3</mn><mo>×</mo><mn>7</mn></mrow><mn>35</mn></mfrac><mi>y</mi><mo>=</mo><mn>2</mn>",
         "prompt": "Find a common denominator.",
-        "hint": "Think about a number that both 7 and 5 divide into evenly. Convert both fractions so they have that denominator, multiplying the numerator and denominator of each fraction by the appropriate amount."
+        "hint": "Think about a number that both 7 and 5 divide into evenly. Convert both fractions so they have that denominator, please explicitly show what numbers the numerators will be multiplied by."
       },
       {
         "expected": "20y/35 - 21y/35 = 2",
